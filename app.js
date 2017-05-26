@@ -6,7 +6,7 @@ const config = {
     port: 5432, //env var: PGPORT
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
-};
+}; 
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -15,10 +15,11 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const csv = require('csv');
 const pgp = require('pg-promise')({  }); // pg-promise module is to connect express to postgresql database
-const db = pgp(config); //connect database with configuration
+// const db = pgp('postgres://cauqjlevbawdgd:358aef3b9ca33a4ae3ada633d9337d6308ad6767409a7064a16cdadd7bd9b17a@ec2-54-197-232-155.compute-1.amazonaws.com:5432/d9nvd4nbjct08'); //connect database with configuration
+const db = pgp(config);
 const stringify = require('csv-stringify');
 const moment = require('moment');
-const cors = require("cors");
+// const cors = require("cors");
 
 var app = express();
 
@@ -33,16 +34,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+// app.use(cors());
 
 // render index.html at the starting url
-app.get('/index', function (req, res) {
-   res.sendfile('views/index.html');
-});
+
 // Catch all other routes and return the index file
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
-});
+//app.get('*', (req, res) => {
+  //  res.sendFile(path.join(__dirname, 'public/index.html'));
+//});
 
 //get data using pg-promise module
 function pgGetSqlUtilityFunc(url, sql) {
