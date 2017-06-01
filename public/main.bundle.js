@@ -1,12 +1,12 @@
 webpackJsonp([1,4],{
 
-/***/ 214:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__(29);
@@ -91,7 +91,7 @@ __decorate([
 EditDeviceHistoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-edit-device-history',
-        template: __webpack_require__(482)
+        template: __webpack_require__(481)
         // styleUrls: ['./device-mgt.component.css']
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */]) === "function" && _b || Object])
@@ -102,13 +102,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 215:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__(29);
@@ -190,7 +190,7 @@ var InsertDeviceHistoryComponent = (function () {
 InsertDeviceHistoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-insert-device-history',
-        template: __webpack_require__(483)
+        template: __webpack_require__(482)
         // styleUrls: ['./device-mgt.component.css']
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */]) === "function" && _b || Object])
@@ -201,13 +201,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 216:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__(29);
@@ -303,7 +303,7 @@ __decorate([
 EditDeviceManagementModalComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-edit-device-management-modal',
-        template: __webpack_require__(486),
+        template: __webpack_require__(485),
         styles: [__webpack_require__(423)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */]) === "function" && _b || Object])
@@ -314,13 +314,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 217:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__(29);
@@ -343,7 +343,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// import {DatePipe} from '../../../../shared/date.pipe';
 var InsertDeviceMgtModalComponent = (function () {
     function InsertDeviceMgtModalComponent(activeModal, deviceService) {
         var _this = this;
@@ -352,6 +351,41 @@ var InsertDeviceMgtModalComponent = (function () {
         this.parent_clinic = [];
         this.sub_clinic = [];
         this.data = {};
+        // data = {
+        //   purchase_order: null,
+        //   registration_date: null,
+        //   device_sn: null,
+        //   iccid: null,
+        //   imei: null,
+        //   model_number: null,
+        //   model_description: null,
+        //   firmware_version: null,
+        //   manufacturer: null,
+        //   points_to: null,
+        //   use_zywie_sim: null,
+        //   sim_provider: null,
+        //   zywie_logo: null,
+        //   wyless_provision_date: null,
+        //   device_test_date: null,
+        //   device_suspension_date: null,
+        //   status: null,
+        //   location: null,
+        //   checked_out_by: null,
+        //   checked_out_date: null,
+        //   checked_in_by: null,
+        //   checked_in_date: null,
+        //   salesteam: null,
+        //   salesperson_name: null,
+        //   enterprise_id: null,
+        //   parent_clinic: null,
+        //   sub_clinic: null,
+        //   physician: null,
+        //   billable: null,
+        //   lease: null,
+        //   lease_price_per_month: null,
+        //   lease_start_date: null,
+        //   lease_end_date: null
+        // };
         this.styles = { checked_out_date: '', checked_in_date: '', wyless_provision_date: '', registration_date: '',
             device_test_date: '', device_suspension_date: '', lease_start_date: '', lease_end_date: '' };
         this.searchParentClinic = function (text$) {
@@ -379,13 +413,9 @@ var InsertDeviceMgtModalComponent = (function () {
         });
         // get parent clinic
         this.deviceService.getData('/deviceMgt/get/parent_clinic').subscribe(function (res) {
-            // this.parent_clinic = res;
             res.forEach(function (value) {
-                // console.log('test');
                 _this.parent_clinic.push(value.parent_clinic);
             });
-            console.log('test');
-            console.log(_this.parent_clinic);
         }, function (err) {
             console.log(err);
         });
@@ -400,9 +430,6 @@ var InsertDeviceMgtModalComponent = (function () {
         });
     };
     ;
-    // searchSubClinic() {
-    //
-    // }
     InsertDeviceMgtModalComponent.prototype.insert = function (value) {
         var _this = this;
         console.log('test');
@@ -422,7 +449,7 @@ var InsertDeviceMgtModalComponent = (function () {
 InsertDeviceMgtModalComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-insert-device-mgt-modal',
-        template: __webpack_require__(487),
+        template: __webpack_require__(486),
         styles: [__webpack_require__(424)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["b" /* NgbActiveModal */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */]) === "function" && _b || Object])
@@ -433,17 +460,17 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 25:
+/***/ 24:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_rx__ = __webpack_require__(723);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_rx__ = __webpack_require__(721);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -667,7 +694,7 @@ var _a;
 
 /***/ }),
 
-/***/ 312:
+/***/ 314:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -676,20 +703,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 312;
+webpackEmptyContext.id = 314;
 
 
 /***/ }),
 
-/***/ 313:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(337);
 
 
 
@@ -702,7 +729,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 322:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -723,7 +750,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
-        template: __webpack_require__(477),
+        template: __webpack_require__(476),
         styles: [__webpack_require__(416)]
     })
 ], AppComponent);
@@ -732,39 +759,39 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 323:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(337);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__service_device_service__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng2_smart_table__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_pagination__ = __webpack_require__(475);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__test_test_component__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_edit_edit_modal__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__device_mgt_device_history_insert_insert_modal__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__shared_shared_variables__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_charts__ = __webpack_require__(432);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng2_smart_table__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_pagination__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_common__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_charts__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__shared_shared_variables__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__shared_uiRouter_config__ = __webpack_require__(336);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -776,6 +803,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import {Injector} from '@angular/core';
  // import ui-router
 
 
@@ -792,36 +820,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
  // import ng2-smart-table
 
- // <-- import the module
+ // import the module
 
 
 
 
 
 
-
-// import { TypeaheadModule  } from 'ngx-bootstrap';
-var routes = { states: [
+ // import config ui-router
+var routes = {
+    states: [
         { name: 'public', abstract: true, component: __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__["a" /* PublicComponent */] },
         { name: 'public.home', url: '/home', component: __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */] },
         { name: 'public.dashboard', url: '/dashboard', component: __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__["a" /* DashboardComponent */] },
         { name: 'public.deviceManagement', url: '/deviceManagement', component: __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__["a" /* DeviceManagementComponent */] },
         { name: 'public.deviceHistory', url: '/deviceHistory', component: __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__["a" /* DeviceHistoryComponent */] },
-        { name: 'public.editDeviceHistory', url: '/deviceHistory/edit', component: __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */] },
-        { name: 'public.insertDeviceHistory', url: '/deviceHistory/insert', component: __WEBPACK_IMPORTED_MODULE_24__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */] },
+        { name: 'public.editDeviceHistory', url: '/deviceHistory/edit', component: __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */] },
+        { name: 'public.insertDeviceHistory', url: '/deviceHistory/insert', component: __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */] },
         { name: 'public.deviceInventory', url: '/deviceInventory', component: __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__["a" /* DeviceInventoryComponent */] },
         { name: 'public.accessoryInventory', url: '/accessoryInventory', component: __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__["a" /* AccessoryInventoryComponent */] },
         { name: 'public.customerManagement', url: '/customerManagement', component: __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__["a" /* CustomerManagementComponent */] },
         { name: 'login', url: '/login', component: __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__["a" /* LoginComponent */] },
         { name: 'signup', url: '/signup', component: __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__["a" /* SignupComponent */] }
-    ] };
-//
-// /** UIRouter Config  */
-// export function uiRouterConfigFn(router: UIRouter) {
-//   // If no URL matches, go to the `hello` state by default
-//   router.urlService.rules.otherwise({ state: 'home' });
-//
-// }
+    ],
+    config: __WEBPACK_IMPORTED_MODULE_27__shared_uiRouter_config__["a" /* uiRouterConfigFn */]
+};
 var AppModule = (function () {
     function AppModule() {
     }
@@ -842,10 +865,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */],
             __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__["a" /* PublicComponent */],
             __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__test_test_component__["a" /* TestComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */]
+            __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -853,18 +875,18 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_18_ng2_smart_table__["a" /* Ng2SmartTableModule */],
             __WEBPACK_IMPORTED_MODULE_20_ngx_pagination__["a" /* NgxPaginationModule */],
-            __WEBPACK_IMPORTED_MODULE_27_ng2_charts__["ChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_25_ng2_charts__["ChartsModule"],
             __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"].forRoot(routes),
+            // RouterModule.forRoot([]),
             __WEBPACK_IMPORTED_MODULE_16__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot()
-            // TypeaheadModule.forRoot()
         ],
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
             __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */]
+            __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_15__service_device_service__["a" /* DeviceService */], __WEBPACK_IMPORTED_MODULE_25__shared_shared_variables__["a" /* SharedVariables */], __WEBPACK_IMPORTED_MODULE_26__angular_common__["a" /* Location */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_15__service_device_service__["a" /* DeviceService */], __WEBPACK_IMPORTED_MODULE_26__shared_shared_variables__["a" /* SharedVariables */], __WEBPACK_IMPORTED_MODULE_24__angular_common__["a" /* Location */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -873,7 +895,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 324:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -899,7 +921,7 @@ var AccessoryInventoryComponent = (function () {
 AccessoryInventoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-accessory-inventory',
-        template: __webpack_require__(478),
+        template: __webpack_require__(477),
         styles: [__webpack_require__(417)]
     }),
     __metadata("design:paramtypes", [])
@@ -909,12 +931,12 @@ AccessoryInventoryComponent = __decorate([
 
 /***/ }),
 
-/***/ 325:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomerManagementComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -957,7 +979,7 @@ var CustomerManagementComponent = (function () {
 CustomerManagementComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-customer-management',
-        template: __webpack_require__(479),
+        template: __webpack_require__(478),
         styles: [__webpack_require__(418)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object])
@@ -968,12 +990,12 @@ var _a;
 
 /***/ }),
 
-/***/ 326:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1164,7 +1186,7 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-dashboard',
-        template: __webpack_require__(480),
+        template: __webpack_require__(479),
         styles: [__webpack_require__(419)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object])
@@ -1175,15 +1197,15 @@ var _a;
 
 /***/ }),
 
-/***/ 327:
+/***/ 329:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_edit_modal__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__insert_insert_modal__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_edit_modal__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__insert_insert_modal__ = __webpack_require__(217);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceHistoryComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1264,7 +1286,7 @@ var DeviceHistoryComponent = (function () {
 DeviceHistoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-device-history',
-        template: __webpack_require__(481),
+        template: __webpack_require__(480),
         styles: [__webpack_require__(420)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */]) === "function" && _b || Object])
@@ -1275,13 +1297,13 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 328:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_smart_table__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_smart_table__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_device_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceInventoryComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1320,7 +1342,7 @@ var DeviceInventoryComponent = (function () {
 DeviceInventoryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-device-inventory',
-        template: __webpack_require__(484),
+        template: __webpack_require__(483),
         styles: [__webpack_require__(421)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object])
@@ -1331,15 +1353,15 @@ var _a;
 
 /***/ }),
 
-/***/ 329:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_device_service__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_device_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeviceManagementComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1509,7 +1531,7 @@ var DeviceManagementComponent = (function () {
 DeviceManagementComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-device-management',
-        template: __webpack_require__(485),
+        template: __webpack_require__(484),
         styles: [__webpack_require__(422)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ng_bootstrap_ng_bootstrap__["c" /* NgbModal */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_device_service__["a" /* DeviceService */]) === "function" && _b || Object])
@@ -1520,11 +1542,12 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 330:
+/***/ 332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_shared_variables__ = __webpack_require__(58);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomepageComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1536,31 +1559,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomepageComponent = (function () {
-    function HomepageComponent() {
+    function HomepageComponent(sharedVariable) {
+        this.sharedVariable = sharedVariable;
     }
     HomepageComponent.prototype.ngOnInit = function () {
+        // console.log(this.sharedVariable.username);
+        this.username = this.sharedVariable.username;
     };
     return HomepageComponent;
 }());
 HomepageComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-homepage',
-        template: __webpack_require__(488),
+        template: __webpack_require__(487),
         styles: [__webpack_require__(425)]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_shared_variables__["a" /* SharedVariables */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_shared_variables__["a" /* SharedVariables */]) === "function" && _a || Object])
 ], HomepageComponent);
 
+var _a;
 //# sourceMappingURL=homepage.component.js.map
 
 /***/ }),
 
-/***/ 331:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(128);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1572,47 +1604,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-// import {Location} from '@angular/common';   // import location
+
+
+
+
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(deviceService, sharedVariable, location, stateService) {
+        this.deviceService = deviceService;
+        this.sharedVariable = sharedVariable;
+        this.location = location;
+        this.stateService = stateService;
+        // url = 'http://localhost:3000';
         // alert msg
-        this.successMessage = true;
-        this.alert = { message: 'incorrect username or password' };
+        this.alert = { successMessage: false, message: 'incorrect username or password' };
         // log in user
-        this.user = { email: null, password: null };
+        this.user = { username: null, password: null };
     }
     LoginComponent.prototype.closeAlert = function () {
-        this.successMessage = false;
+        this.alert.successMessage = false;
+    };
+    LoginComponent.prototype.ngOnInit = function () {
     };
     // login form submit
     LoginComponent.prototype.submit = function (user) {
-        if (!user.email || !user.password) {
-            // this.successMessage = true;
-            this.alert.message = 'email and password is required';
+        var _this = this;
+        if (!user.username || !user.password) {
+            this.alert = { successMessage: true, message: 'email and password is required' };
         }
-    };
-    LoginComponent.prototype.ngOnInit = function () {
+        else {
+            this.deviceService.postData('/authenticateUser', user).subscribe(function (res) {
+                _this.sharedVariable.username = res.username;
+                _this.stateService.go('public.home');
+            }, function (err) {
+                console.log(err);
+                _this.alert = { successMessage: true, message: 'Incorrect email or password' };
+            });
+        }
     };
     return LoginComponent;
 }());
 LoginComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
-        template: __webpack_require__(489),
+        template: __webpack_require__(488),
         styles: [__webpack_require__(426)]
+        // providers: [UIRouter]  // do not need providers for UIRouter, otherwise it will cause error
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* Location */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["StateService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["StateService"]) === "function" && _d || Object])
 ], LoginComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
 
-/***/ 332:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angular__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_shared_variables__ = __webpack_require__(58);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PublicComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1624,31 +1677,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var PublicComponent = (function () {
-    function PublicComponent() {
+    // url = 'http://localhost:3000';
+    function PublicComponent(stateService, http, sharedVariables) {
+        this.stateService = stateService;
+        this.http = http;
+        this.sharedVariables = sharedVariables;
     }
     PublicComponent.prototype.ngOnInit = function () {
+    };
+    PublicComponent.prototype.logout = function () {
+        var _this = this;
+        this.http.get('/logout').toPromise().then(function (res) {
+            _this.sharedVariables.username = null;
+            _this.stateService.go('login');
+        });
     };
     return PublicComponent;
 }());
 PublicComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-public',
-        template: __webpack_require__(490),
+        template: __webpack_require__(489),
         styles: [__webpack_require__(427)]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__uirouter_angular__["StateService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__uirouter_angular__["StateService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__shared_shared_variables__["a" /* SharedVariables */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__shared_shared_variables__["a" /* SharedVariables */]) === "function" && _c || Object])
 ], PublicComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=public.component.js.map
 
 /***/ }),
 
-/***/ 333:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1660,107 +1729,79 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var SignupComponent = (function () {
-    function SignupComponent() {
+    function SignupComponent(deviceService) {
+        this.deviceService = deviceService;
+        // url = 'http://localhost:3000';
         this.submitted = false;
         // alert msg
-        this.successMessage = true;
-        this.alert = { message: null };
-        this.user = { firstName: null, lastName: null, email: null, pwd: null, pwd2: null };
+        this.alert = { successMessage: false, message: null };
+        this.user = { first_name: null, last_name: null, email: null, password: null, password2: null };
     }
     SignupComponent.prototype.closeAlert = function () {
-        this.successMessage = false;
+        this.alert.successMessage = false;
+    };
+    SignupComponent.prototype.ngOnInit = function () {
     };
     // submit sign up form
     SignupComponent.prototype.submit = function (user) {
-        if (user.pwd !== user.pwd2) {
-            this.alert.message = 'passwords are not the same';
+        var _this = this;
+        if (user.password !== user.password2) {
+            console.log('test');
+            this.alert = { successMessage: true, message: 'passwords are not the same' };
         }
-    };
-    SignupComponent.prototype.ngOnInit = function () {
+        else {
+            console.log(user);
+            this.deviceService.postData('/addNewUsers', user).subscribe(function (res) {
+                console.log(res);
+                _this.submitted = true;
+            }, function (err) {
+                console.log(err);
+                _this.alert = { successMessage: true, message: err };
+            });
+        }
     };
     return SignupComponent;
 }());
 SignupComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-signup',
-        template: __webpack_require__(491),
+        template: __webpack_require__(490),
         styles: [__webpack_require__(428)]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object])
 ], SignupComponent);
 
+var _a;
 //# sourceMappingURL=signup.component.js.map
 
 /***/ }),
 
-/***/ 334:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedVariables; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SharedVariables = (function () {
-    function SharedVariables() {
-    }
-    return SharedVariables;
-}());
-SharedVariables = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [])
-], SharedVariables);
-
-//# sourceMappingURL=shared.variables.js.map
-
-/***/ }),
-
-/***/ 335:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TestComponent = (function () {
-    function TestComponent() {
-    }
-    TestComponent.prototype.ngOnInit = function () {
-    };
-    return TestComponent;
-}());
-TestComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-test',
-        template: __webpack_require__(492),
-        styles: [__webpack_require__(429)]
-    }),
-    __metadata("design:paramtypes", [])
-], TestComponent);
-
-//# sourceMappingURL=test.component.js.map
-
-/***/ }),
-
 /***/ 336:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__shared_shared_variables__ = __webpack_require__(58);
+/* harmony export (immutable) */ __webpack_exports__["a"] = uiRouterConfigFn;
+
+// ui-router config
+function uiRouterConfigFn(router, injector) {
+    var checkLogin = injector.get(__WEBPACK_IMPORTED_MODULE_0__shared_shared_variables__["a" /* SharedVariables */]);
+    // Pre-load username at startup.
+    var username = checkLogin.username;
+    // check username exists or not
+    if (!username) {
+        router.urlService.url('/login');
+    }
+    // If no URL matches, go to the `login` state by default
+    router.urlService.rules.otherwise({ state: 'login' });
+}
+//# sourceMappingURL=uiRouter.config.js.map
+
+/***/ }),
+
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1780,7 +1821,7 @@ var environment = {
 /***/ 416:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1798,7 +1839,7 @@ module.exports = module.exports.toString();
 /***/ 417:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1816,7 +1857,7 @@ module.exports = module.exports.toString();
 /***/ 418:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1834,7 +1875,7 @@ module.exports = module.exports.toString();
 /***/ 419:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1852,7 +1893,7 @@ module.exports = module.exports.toString();
 /***/ 420:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1870,7 +1911,7 @@ module.exports = module.exports.toString();
 /***/ 421:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1888,7 +1929,7 @@ module.exports = module.exports.toString();
 /***/ 422:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1906,7 +1947,7 @@ module.exports = module.exports.toString();
 /***/ 423:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1924,7 +1965,7 @@ module.exports = module.exports.toString();
 /***/ 424:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1942,7 +1983,7 @@ module.exports = module.exports.toString();
 /***/ 425:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1960,7 +2001,7 @@ module.exports = module.exports.toString();
 /***/ 426:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1978,7 +2019,7 @@ module.exports = module.exports.toString();
 /***/ 427:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -1996,12 +2037,12 @@ module.exports = module.exports.toString();
 /***/ 428:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(15)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\r\n.register-box {\r\n  width: 500px;\r\n  margin-top: 60px;\r\n}\r\n\r\n.ng-valid[required], .ng-valid.required  {\r\n  border-left: 5px solid #42A948; /* green */\r\n}\r\n.ng-invalid:not(form) {\r\n  border-left: 5px solid #a94442; /* red */\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n.register-box {\r\n  width: 500px;\r\n  margin-top: 60px;\r\n}\r\n\r\n.ng-valid[required], .ng-valid.required  {\r\n  border-left: 5px solid #42A948; /* green */\r\n}\r\n.ng-invalid:not(form) {\r\n  border-left: 5px solid #a94442; /* red */\r\n}\r\n.submitSuccess {\r\n  margin-left: 30%;\r\n  width: 400px;\r\n  margin-top: 10%;\r\n}\r\n", ""]);
 
 // exports
 
@@ -2011,143 +2052,145 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 429:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(15)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 477:
+/***/ 476:
 /***/ (function(module, exports) {
 
 module.exports = "<ui-view>\n  <!--<a uiSref=\"login\">login</a>-->\n</ui-view>\n"
 
 /***/ }),
 
-/***/ 478:
+/***/ 477:
 /***/ (function(module, exports) {
 
 module.exports = "<p>\n  accessory-inventory works!\n</p>\n"
 
 /***/ }),
 
-/***/ 479:
+/***/ 478:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container\">\n  <br>\n  <table class=\"table table-condensed table-sm table-hover table-responsive\">\n    <thead>\n    <tr>\n      <th>NO.</th>\n      <th>Clinic</th>\n      <!--<th>Sub Clinic</th>-->\n      <th>Count of Devices</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let item of customerData; let i=index\">\n      <td>{{i+1}}</td>\n      <td (contextmenu)=\"rightClick($event)\">\n        {{item.parent_clinic}}\n        <!--<ngb-accordion #acc=\"ngbAccordion\" [type]=\"success\">-->\n          <!--<ngb-panel>-->\n            <!--<ng-template ngbPanelTitle>-->\n              <!--<div><i class=\"fa fa-angle-down\"></i>{{item.parent_clinic}}</div>-->\n            <!--</ng-template>-->\n            <!--<ng-template ngbPanelContent>-->\n              <!--test-->\n              <!--&lt;!&ndash;<p *ngFor=\"let device of item.device_sn\">{{item.device_sn}}</p>&ndash;&gt;-->\n            <!--</ng-template>-->\n          <!--</ngb-panel>-->\n        <!--</ngb-accordion>-->\n      </td>\n      <!--<div style=\"background-color: grey; width:200px; height: 200px\" >-->\n        <!--right click {{test}} times-->\n      <!--</div>-->\n      <!--<td class=\"customcss\">{{item.sub_clinic}}</td>-->\n      <td class=\"text-center\"><span class=\"badge badge-pill badge-default\">{{item.totaldevices}}</span></td>\n\n    </tr>\n    <tr>\n      <td></td>\n      <td><strong>Grand Total</strong></td>\n      <!--<td></td>-->\n      <td class=\"text-center\"><strong>{{totalDevices}}</strong></td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n"
 
 /***/ }),
 
-/***/ 480:
+/***/ 479:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container\">\n  <br>\n  <!--summary table-->\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      <table class=\"table table-condensed table-bordered table-hover table-striped dashboardTables\">\n        <thead>\n        <tr>\n          <th>Available Inventory List (Ttls)</th>\n          <th>Qty</th>\n        </tr>\n        </thead>\n        <tbody>\n        <tr class=\"text-danger\">\n          <td>Total Available Devices</td>\n          <td><strong>{{totalAvailableDevices}}</strong></td>\n        </tr>\n        <tr>\n          <td>3M 2560 red dot electrodes(50/packet)</td>\n          <td>2</td>\n        </tr>\n        <tr>\n          <td>3M 2570-5 red dot electrodes</td>\n          <td>1000</td>\n        </tr>\n        <tr>\n          <td>Sensitive Electrodes(60/packet)</td>\n          <td>9</td>\n        </tr>\n        <tr>\n          <td>Dual-Electrodes(300/packet)</td>\n          <td>6</td>\n        </tr>\n        <tr>\n          <td>Device User Manuals</td>\n          <td>30</td>\n        </tr>\n        <tr>\n          <td>Cel-Fi Smart Signal Booster</td>\n          <td>2</td>\n        </tr>\n        </tbody>\n      </table>\n    </div>\n    <div class=\"col-sm-offset-2 col-sm-4\">\n      <table class=\"table table-bordered table-hover table-striped dashboardTables\">\n        <tr>\n          <th>Devices Ordered from TZ Medical</th>\n          <th>Qty</th>\n        </tr>\n        <tr>\n          <td>Total Ordered Qty</td>\n          <td>{{orders.total_ordered_qty}}</td>\n        </tr>\n        <tr>\n          <td>Total Received Qty</td>\n          <td>{{orders.total_received_qty}}</td>\n        </tr>\n        <tr>\n          <td>Total Deficiency Qty</td>\n          <td>{{orders.total_deficiency_qty}}</td>\n        </tr>\n      </table>\n    </div>\n  </div>\n  <br>\n  <div style=\"display: block\" class=\"text-center\" *ngIf=\"billable.isDataAvailable \">\n    <canvas baseChart width=\"300\" height=\"300\" [datasets]=\"billable.datasets\"  [options]=\"billable.options\"\n            [labels]=\"billable.labels\" [colors]=\"billable.colors\"  chartType=\"pie\">\n    </canvas>\n  </div>\n  <div class=\"row\">\n    <div  style=\"display: block\" class=\"col-sm-6\"  *ngIf=\"status.isDataAvailable\">\n      <canvas baseChart width=\"400\" height=\"250\" [datasets]=\"status.datasets\"  [labels]=\"status.labels\" [options]=\"status.options\"\n            [colors]=\"status.colors\"   [legend]=\"false\"  chartType=\"horizontalBar\">\n      </canvas>\n    </div>\n    <br>\n    <div  style=\"display: block\" class=\"col-sm-6\"  *ngIf=\"location.isDataAvailable\">\n      <canvas baseChart width=\"400\" height=\"250\" [datasets]=\"location.datasets\"  [labels]=\"location.labels\" [options]=\"location.options\"\n              [colors]=\"location.colors\"   [legend]=\"false\"  chartType=\"horizontalBar\">\n      </canvas>\n    </div>\n  </div>\n  <br>\n   <div  style=\"display: block\" class=\"text-center\"  *ngIf=\"purchaseOrder.isDataAvailable\">\n     <canvas baseChart width=\"800\" height=\"260\" [datasets]=\"purchaseOrder.datasets\"  [labels]=\"purchaseOrder.labels\" [options]=\"purchaseOrder.options\"\n             [colors]=\"purchaseOrder.colors\"   [legend]=\"false\"  chartType=\"bar\">\n     </canvas>\n   </div>\n\n</div>\n"
 
 /***/ }),
 
-/***/ 481:
+/***/ 480:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container-fluid\">\n    <ngb-tabset>\n      <div>\n        <ngb-tab title=\"History\">\n          <ng-template ngbTabContent>\n            <div style=\"width: 900px\">\n              <ngb-alert *ngIf=\"alert.successMessage\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n            </div>\n            <br>\n            <div class=\"row search\">\n                <select [(ngModel)]=\"search.searchBy\" class=\"offset-sm-1 col-sm-2\">\n                  <option value=\"\" selected disabled>Select an search</option>\n                  <option value=\"history_date\">History Date</option>\n                  <option value=\"device_sn\">Device SN</option>\n                  <option value=\"device_action\">Device Action</option>\n                  <option value=\"by_whom\">By Whom</option>\n                  <option value=\"status\">Status</option>\n                  <option value=\"device_owner\">Device Owner</option>\n                  <option value=\"replace_device\">Replaced Device</option>\n                  <option value=\"replaced_device_sn\">Replaced Device SN</option>\n                </select>\n                <input type=\"text\" [(ngModel)]=\"search.searchValue\" placeholder=\" Search Value\">\n              <button class=\"btn btn-sm btn-primary\" (click)=\"searchByItem(search)\"><i class=\"fa fa-search\"></i></button>\n              <button class=\"btn btn-secondary offset-sm-5 col-sm-1\" (click)=\"create()\">Create New</button>\n            </div>\n            <br>\n\n            <table class=\"table table-bordered table-hover table-sm table-responsive\">\n              <thead>\n                <tr>\n                  <th>Action</th>\n                  <th>NO.</th>\n                  <th>History Date</th>\n                  <th>Device_sn</th>\n                  <th>Device Action</th>\n                  <th>By Whom</th>\n                  <th>Status</th>\n                  <th>Device Owner</th>\n                  <th>Replace Device</th>\n                  <th>Replaced Device SN</th>\n                  <th>Note</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr *ngFor=\"let item of deviceHistoryData | paginate: { itemsPerPage: SelectedNumberOfRow , currentPage: p }; let i = index\">\n                  <td class=\"text-center action\">\n                      <div class=\"d-inline-block\" ngbDropdown #myDrop=\"ngbDropdown\">\n                          <i class=\"fa fa-angle-down\" style=\"color: darkblue\" ngbDropdownToggle></i>\n                        <div class=\"dropdown-menu\" aria-labelledby=\"dropdownManual\">\n                          <button class=\"dropdown-item\" (click)=\"edit(i)\">Edit</button>\n                          <!--modal to confirm delete-->\n                          <ng-template #content let-c=\"close\" let-d=\"dismiss\">\n                            <div class=\"modal-header\">\n                              <h4 class=\"modal-title\">Confirm</h4>\n                            </div>\n                            <div class=\"modal-body\">\n                              <div class=\"container\">\n                                <p>Are you sure to delete device SN <strong>{{item.device_sn}}</strong> history?</p>\n                                <br><br>\n                                <button type=\"button\" class=\"btn btn-secondary col-sm-3\" (click)=\"d()\">Cancel</button>\n                                <button type=\"button\" class=\"btn btn-danger col-sm-3 pull-right\" (click)=\"c(item)\">Confirm</button>\n                                <br><br>\n                              </div>\n                            </div>\n                          </ng-template>\n                          <button class=\"dropdown-item\" (click)=\"delete(content)\">delete</button>\n                          <!--end of modal for delete-->\n                        </div>\n                      </div>\n                    </td>\n                  <td><div style=\"width: 10px\">{{i+1}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.history_date | date: 'yyyy-MM-dd'}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.device_sn}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.device_action}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.by_whom}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.status}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.device_owner}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.replace_device}}</div></td>\n                  <td><div style=\"width: 100px\">{{item.replaced_device_sn}}</div></td>\n                  <td><div style=\"width: 200px\">{{item.note}}</div></td>\n                </tr>\n              </tbody>\n            </table>\n            <div class=\"row\">\n              <div class=\"col-sm-7\">\n                <!--ngx-pagination-->\n                <pagination-controls (pageChange)=\"p = $event\" autoHide=\"true\"></pagination-controls>\n              </div>\n              <div class=\"offset-sm-3 col-sm-2\">\n                <select [(ngModel)]=\"SelectedNumberOfRow\">\n                  <option value=\"30\" selected>30</option>\n                  <option value=\"50\">50</option>\n                  <option value=\"100\">100</option>\n                  <option value=\"200\">200</option>\n                </select>\n              </div>\n            </div>\n\n          </ng-template>\n        </ngb-tab>\n      </div>\n\n      <ngb-tab title=\"Action\">\n        <ng-template ngbTabContent>\n\n        </ng-template>\n      </ngb-tab>\n    </ngb-tabset>\n\n</div>\n"
 
 /***/ }),
 
-/***/ 482:
+/***/ 481:
 /***/ (function(module, exports) {
 
 module.exports = "\r\n<div class=\"modal-header\">\r\n  <h4 class=\"modal-title\">Device History Update</h4>\r\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss()\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n  <div class=\"container\">\r\n    <div class=\"text-danger\" *ngIf=\"error\">{{error}}</div>\r\n    <br>\r\n    <form #ngForm=\"ngForm\" name=\"ngForm\">\r\n      <br>\r\n      <div class=\"form-group row\">\r\n        <label for=\"history_date\" class=\"col-4 text-right col-form-label\">History Date</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"history_date\"  name=\"history_date\" [ngStyle]=\"styles.history_date_style\"\r\n                 [value]=\"data.history_date | date: 'yyyy-MM-dd'\" (change)=\"data.history_date=$event.target.value\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_sn\" class=\"col-4 text-right col-form-label\">Device SN *</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"device_sn\"  name=\"device_sn\" [(ngModel)]=\"data.device_sn\" required #device_sn=\"ngModel\">\r\n          <div class=\"pull-right form_msg\" *ngIf=\"device_sn.errors?.required\">Device SN is required</div>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_action\" class=\"col-4 text-right col-form-label\">Device Action</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.device_action\" class=\"form-control\" id=\"device_action\" name=\"device_action\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.device_action\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"by_whom\" class=\"col-4 text-right col-form-label\">By Whom</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.by_whom\" class=\"form-control\" id=\"by_whom\" name=\"by_whom\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.by_whom\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"status\" class=\"col-4 text-right col-form-label\">Status</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.status\" class=\"form-control\" id=\"status\" name=\"status\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.status\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_owner\" class=\"col-4 text-right col-form-label\">Device Owner</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"device_owner\" name=\"device_owner\"\r\n                 [(ngModel)]=\"data.device_owner\" [ngbTypeahead]=\"search\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"replace_device\" class=\"col-4 text-right col-form-label\">Replace Device</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.replace_device\" class=\"form-control\" id=\"replace_device\" name=\"replace_device\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.YesOrNo\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\" *ngIf=\"data.replace_device == 'Y'\">\r\n        <label for=\"replaced_device_sn\" class=\"col-4 text-right col-form-label\">Replaced Device SN</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"replaced_device_sn\" name=\"replaced_device_sn\"  [ngStyle]=\"styles.replaced_device_SN_style\"\r\n                 [(ngModel)]=\"data.replaced_device_sn\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"note\" class=\"col-4 text-right col-form-label\">Note</label>\r\n        <div class=\"col-5\">\r\n          <textarea class=\"form-control\" type=\"text\"  id=\"note\"  name=\"note\" [(ngModel)]=\"data.note\" style=\"height: 200px\"></textarea>\r\n        </div>\r\n      </div>\r\n    </form>\r\n    <br>\r\n    <button type=\"button\" class=\"btn btn-secondary col-sm-2\" (click)=\"activeModal.dismiss()\">Cancel</button>\r\n    <button type=\"button\" class=\"btn btn-danger offset-sm-7 col-sm-2\" (click)=\"update(data)\" >Update</button>\r\n    <br><br>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
-/***/ 483:
+/***/ 482:
 /***/ (function(module, exports) {
 
 module.exports = "\r\n<div class=\"modal-header\">\r\n  <h4 class=\"modal-title\">Create New</h4>\r\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss()\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n  <div class=\"container\">\r\n    <div class=\"text-danger\" *ngIf=\"error\">{{error}}</div>\r\n    <br>\r\n    <form #ngForm=\"ngForm\" name=\"ngForm\">\r\n      <br>\r\n      <div class=\"form-group row\">\r\n        <label for=\"history_date\" class=\"col-4 text-right col-form-label\">History Date</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"history_date\"  name=\"history_date\" [ngStyle]=\"styles.history_date_style\"\r\n                 [value]=\"data.history_date | date: 'yyyy-MM-dd'\" (change)=\"data.history_date=$event.target.value\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_sn\" class=\"col-4 text-right col-form-label\">Device SN *</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"device_sn\"  name=\"device_sn\" [(ngModel)]=\"data.device_sn\" required #device_sn=\"ngModel\">\r\n          <div class=\"pull-right form_msg\" *ngIf=\"device_sn.errors?.required && device_sn.touched\">Device SN is required</div>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_action\" class=\"col-4 text-right col-form-label\">Device Action</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.device_action\" class=\"form-control\" id=\"device_action\" name=\"device_action\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.device_action\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"by_whom\" class=\"col-4 text-right col-form-label\">By Whom</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.by_whom\" class=\"form-control\" id=\"by_whom\" name=\"by_whom\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.by_whom\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"status\" class=\"col-4 text-right col-form-label\">Status</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.status\" class=\"form-control\" id=\"status\" name=\"status\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.status\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"device_owner\" class=\"col-4 text-right col-form-label\">Device Owner</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"device_owner\" name=\"device_owner\"\r\n                 [(ngModel)]=\"data.device_owner\" [ngbTypeahead]=\"search\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"replace_device\" class=\"col-4 text-right col-form-label\">Replace Device</label>\r\n        <div class=\"col-5\">\r\n          <select [(ngModel)]=\"data.replace_device\" class=\"form-control\" id=\"replace_device\" name=\"replace_device\">\r\n            <option value=\"\"></option>\r\n            <option *ngFor=\"let o of options.YesOrNo\" [value]=\"o\">{{o}}</option>\r\n          </select>\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\" *ngIf=\"data.replace_device == 'Y'\">\r\n        <label for=\"replaced_device_sn\" class=\"col-4 text-right col-form-label\">Replaced Device SN</label>\r\n        <div class=\"col-5\">\r\n          <input class=\"form-control\" type=\"text\"  id=\"replaced_device_sn\" name=\"replaced_device_sn\"  [ngStyle]=\"styles.replaced_device_SN_style\"\r\n                 [(ngModel)]=\"data.replaced_device_sn\">\r\n        </div>\r\n      </div>\r\n      <div class=\"form-group row\">\r\n        <label for=\"note\" class=\"col-4 text-right col-form-label\">Note</label>\r\n        <div class=\"col-5\">\r\n          <textarea class=\"form-control\" type=\"text\"  id=\"note\"  name=\"note\" [(ngModel)]=\"data.note\" style=\"height: 200px\"></textarea>\r\n        </div>\r\n      </div>\r\n    </form>\r\n    <br>\r\n    <button type=\"button\" class=\"btn btn-secondary col-sm-2\" (click)=\"activeModal.dismiss()\">Cancel</button>\r\n    <button type=\"button\" class=\"btn btn-danger offset-sm-7 col-sm-2\" (click)=\"add(data)\" >Add</button>\r\n    <br><br>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
-/***/ 484:
+/***/ 483:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container-fluid table-responsive\">\n  <!--<input #search class=\"search\" type=\"text\" placeholder=\"Search...\" (keydown.enter)=\"onSearch(search.value)\">-->\n    <h4>Device Inventory Table</h4>\n    <ng2-smart-table class=\"table table-bordered table-hover table-sm\" [settings]=\"settings\" [source]=\"source\"></ng2-smart-table>\n</div>\n"
 
 /***/ }),
 
-/***/ 485:
+/***/ 484:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container-fluid\">\r\n  <br>\r\n  <div style=\"width: 900px\">\r\n    <ngb-alert *ngIf=\"alert.successMessage\" [type]=\"alert.type\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\r\n  </div>\r\n  <h6>Device Summary</h6>\r\n\r\n  <div class=\"row customBtns\">\r\n    <button type=\"button\" class=\"btn btn-default btn-sm col-sm-1\" (click)=\"editSelectedData()\" [disabled]=\"!ifSelected\" [ngClass]=\"{dynamicChangeCursor: ifSelected}\">\r\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> Edit Selected\r\n    </button>\r\n    <!--delete-->\r\n    <ng-template #content let-c=\"close\" let-d=\"dismiss\">\r\n      <div class=\"modal-header\">\r\n        <h4 class=\"modal-title\">Confirm Device SN {{selectedMgtData.device_sn}}</h4>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <div class=\"container\">\r\n          <p>Are you sure to delete device SN {{selectedMgtData.device_sn}}?</p>\r\n          <br><br>\r\n          <button type=\"button\" class=\"btn btn-secondary col-sm-3\" (click)=\"d()\">Cancel</button>\r\n          <button type=\"button\" class=\"btn btn-danger col-sm-3 pull-right\" (click)=\"c()\">Confirm</button>\r\n          <br><br>\r\n        </div>\r\n      </div>\r\n    </ng-template>\r\n\r\n    <button type=\"button\" class=\"btn btn-default btn-sm offset-sm-1\" (click)=\"deleteSelectedData(content)\"\r\n            [disabled]=\"!ifSelected\" [ngClass]=\"{dynamicChangeCursor: ifSelected}\">\r\n      <i class=\"fa fa-eraser\" aria-hidden=\"true\"></i> Delete Selected\r\n    </button>\r\n\r\n    <!--delete-->\r\n    <button type=\"button\" class=\"btn btn-default btn-sm offset-sm-4 col-sm-1\" (click)=\"create()\">Create New</button>\r\n    <button type=\"button\" class=\"btn btn-default btn-sm col-sm-1\">\r\n      <a [href]=\"downloadUrl\" download=\"deviceMgt.csv\" style=\"color: black\"> <span class=\"fa fa-download\"></span> Export</a>\r\n    </button>\r\n\r\n\r\n    <!--filtering in popover-->\r\n    <ng-template #popContent >\r\n      <table class=\"filtering\">\r\n        <tr>\r\n          <td>Device SN</td>\r\n          <td><input  type=\"text\"  [(ngModel)]=\"search.device_sn\"></td>\r\n        </tr>\r\n        <tr>\r\n          <td>Parent Clinic</td>\r\n          <td><input type=\"text\"  [(ngModel)]=\"search.parent_clinic\"></td>\r\n        </tr>\r\n        <tr>\r\n          <td>Status</td>\r\n          <td>\r\n            <select  [(ngModel)]=\"search.status\">\r\n              <option *ngFor=\"let s of options.status\" [value]=\"s\">{{s}}</option>\r\n            </select>\r\n          </td>\r\n        </tr>\r\n        <tr>\r\n          <td>Location</td>\r\n          <select  [(ngModel)]=\"search.location\">\r\n            <option *ngFor=\"let s of options.location\" [value]=\"s\">{{s}}</option>\r\n          </select>\r\n        </tr>\r\n      </table>\r\n      <br>\r\n      <button type=\"button\" class=\"btn btn-default btn-sm \" (click)=\"clearFilter(); popover.close()\">Clear</button>\r\n      <button type=\"button\" class=\"btn btn-primary btn-sm pull-right\" (click)=\"filter(search, popover)\">Search</button>\r\n    </ng-template>\r\n\r\n    <button type=\"button\" class=\"btn btn-default btn-sm col-sm-1\" [ngbPopover]=\"popContent\" #popover=\"ngbPopover\" popoverTitle=\"Filters\" placement=\"left\">\r\n      Filter <span class=\"fa fa-sort-desc\"></span></button>\r\n  </div>\r\n\r\n\r\n  <!--table-->\r\n  <table class=\"table table-hover table-sm table-responsive\">\r\n    <thead>\r\n    <tr>\r\n      <th><input type=\"checkbox\" disabled></th>\r\n      <th (click)=\"sortString('device_sn')\">Device SN<span class=\"fa fa-sort-desc\"></span>\r\n      </th>\r\n      <th (click)=\"sortString('status')\">Status<span class=\"fa fa-sort-desc\"></span></th>\r\n      <th>Checked Out By</th>\r\n      <th>Checked Out Date</th>\r\n      <th (click)=\"sortString('location')\">Location<span class=\"fa fa-sort-desc\"></span></th>\r\n      <th (click)=\"sortString('parent_clinic')\">Parent Clinic<span class=\"fa fa-sort-desc\"></span></th>\r\n      <th (click)=\"sortString('sub_clinic')\">Sub Clinic<span class=\"fa fa-sort-desc\"></span></th>\r\n      <th (click)=\"sortString('physician')\">Physician<span class=\"fa fa-sort-desc\"></span></th>\r\n      <th (click)=\"sortString('billable')\">Billable<span class=\"fa fa-sort-desc\"></span></th>\r\n    </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr [hidden]=\"!deviceMgtData?.length\" (click)=\"selectedOrUnselectRow(i)\" [ngClass]=\"{active: classTrueOrFalse[i]}\"\r\n        *ngFor=\"let item of deviceMgtData | paginate: { itemsPerPage: RowsPerPage, currentPage: p }; let i=index\">\r\n      <!--<td><input type=\"checkbox\" [value]=\"i\" (change)=\"checkbox($event)\"></td>-->\r\n      <td><input type=\"checkbox\" [ngModel]=\"classTrueOrFalse[i]\"></td>\r\n      <td>{{item.device_sn}}</td>\r\n      <td>{{item.status}}</td>\r\n      <td>{{item.checked_out_by}}</td>\r\n      <td>{{item.checked_out_date | date: 'yyyy-MM-dd'}}</td>\r\n      <td>{{item.location}}</td>\r\n      <td>{{item.parent_clinic}}</td>\r\n      <td>{{item.sub_clinic}}</td>\r\n      <td>{{item.physician}}</td>\r\n      <td><div [ngStyle]=\"billableStyle(item.billable)\" class=\"text-center\">{{item.billable}}</div></td>\r\n    </tr>\r\n    <div [hidden]=\"deviceMgtData?.length\" class=\"text-center text-danger\">No result found!</div>\r\n    </tbody>\r\n  </table>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-5\">\r\n      <!--ngx-pagination-->\r\n      <pagination-controls (pageChange)=\"p = $event\" autoHide=\"true\"></pagination-controls>\r\n    </div>\r\n    <div class=\"offset-sm-5 col-sm-2\">\r\n      <select [(ngModel)]=\"RowsPerPage\">\r\n        <option value=\"30\" selected>30</option>\r\n        <option value=\"50\">50</option>\r\n        <option value=\"100\">100</option>\r\n        <option value=\"200\">200</option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ 486:
+/***/ 485:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <h4 class=\"modal-title\">Device SN {{data.device_sn}}</h4>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"container\">\n    <div *ngIf=\"error\" class=\"text-danger\">{{error}}</div>\n    <div class=\"greyarea\">\n      <h5 class=\"text-success\">Device Feature</h5>\n      <div><label >status</label>\n        <select class=\"pull-right\" [(ngModel)]=\"data.status\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let s of options.status\" [value]=\"s\">{{s}}</option>\n        </select>\n      </div>\n      <div><label >location</label>\n        <select class=\"pull-right\" [(ngModel)]=\"data.location\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let l of options.location\" [value]=\"l\">{{l}}</option>\n        </select>\n      </div>\n      <div><label >parent clinic</label>\n        <input class=\"pull-right\" [(ngModel)]=\"data.parent_clinic\" [ngbTypeahead]=\"searchParentClinic\">\n      </div>\n      <div><label >sub clinic</label>\n        <input class=\"pull-right\" [(ngModel)]=\"data.sub_clinic\" [ngbTypeahead]=\"searchSubClinic\">\n      </div>\n      <div><label >Checked out by</label>\n        <select class=\"pull-right\" [(ngModel)]=\"data.checked_out_by\">\n          <option value=''></option>\n          <option *ngFor=\"let m of options.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div>\n        <label >checked out date</label>\n        <!--<input [(ngModel)]=\"data.checked_out_date\">-->\n        <input class=\"pull-right\" type=\"text\" [value]=\"data.checked_out_date |  date:'yyyy-MM-dd'\" [ngStyle]=\"styles.checked_out_date\"\n               (change)=\"data.checked_out_date = $event.target.value\">\n        <!--<span *ngIf=test.errors?.pattern\">Date Format: yyyy-MM-dd</span>-->\n      </div>\n      <p>Or</p>\n      <div><label>checked in by</label>\n        <select class=\"pull-right\" [(ngModel)]=\"data.checked_in_by\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let m of options.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div><label>checked in date</label>\n        <input class=\"pull-right\" type=\"text\" [value]=\"data.checked_in_date | date:'yyyy-MM-dd'\" [ngStyle]=\"styles.checked_in_date\"\n               (change)=\"data.checked_in_date=$event.target.value\">\n      </div>\n    </div>\n    <hr>\n    <div class=\"row\">\n      <div class=\"col\">\n          <h5 class=\"text-primary\">Device Attributes</h5>\n          <div><label >iccid</label><input class=\"pull-right\" type=\"text\" [(ngModel)]=\"data.iccid\"></div>\n          <div><label>imei</label><input class=\"pull-right\" type=\"text\" [(ngModel)]=\"data.imei\"></div>\n          <div><label >model number</label><input class=\"pull-right\"  type=\"text\" [(ngModel)]=\"data.model_number\"></div>\n          <div><label >points to</label>\n            <select class=\"pull-right\" [(ngModel)]=\"data.points_to\">\n              <option value=\"\"></option>\n              <option *ngFor=\"let m of options.points_to\" [value]=\"m\">{{m}}</option>\n            </select>\n          </div>\n\n        <div>\n            <label >model description</label>\n            <select class=\"pull-right\" [(ngModel)]=\"data.model_description\">\n              <option value=\"\"></option>\n              <option *ngFor=\"let m of options.model_description\" [value]=\"m\">{{m}}</option>\n            </select>\n          </div>\n\n          <div>\n            <label >manufacturer</label>\n            <select class=\"pull-right\" [(ngModel)]=\"data.manufacturer\">\n              <option value=\"\"></option>\n              <option *ngFor=\"let m of options.manufacturer\" [value]=\"m\">{{m}}</option>\n            </select>\n          </div>\n        <div>\n          <label >firmware version</label>\n          <select class=\"pull-right\" [(ngModel)]=\"data.firmware_version\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.firmware_version\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label >zywie logo</label>\n          <select class=\"pull-right\" [(ngModel)]=\"data.zywie_logo\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n          <br>\n          <h5 class=\"text-primary\">SIM Attributes</h5>\n          <div>\n            <label>sim provider</label>\n            <select class=\"pull-right\" [(ngModel)]=\"data.sim_provider\">\n              <option value=\"\"></option>\n              <option *ngFor=\"let m of options.sim_provider\" [value]=\"m\">{{m}}</option>\n            </select>\n          </div>\n          <div><label>wyless provision_date</label>\n            <input class=\"pull-right\" type=\"text\" [value]=\"data.wyless_provision_date | date:'yyyy-MM-dd'\"  [ngStyle]=\"styles.wyless_provision_date\"\n                   (change)=\"data.wyless_provision_date=$event.target.value\"></div>\n          <div><label>use zywie sim</label>\n            <select class=\"pull-right\" [(ngModel)]=\"data.use_zywie_sim\">\n              <option value=\"\"></option>\n              <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n            </select>\n          </div>\n      </div>\n      <div class=\"col\">\n        <h5 class=\"text-primary\">Order Atrributes</h5>\n        <div><label>purchase order</label><input class=\"pull-right\" type=\"text\" [(ngModel)]=\"data.purchase_order\"></div>\n        <div><label>registration date</label>\n          <input class=\"pull-right\" type=\"text\" [value]=\"data.registration_date | date:'yyyy-MM-dd'\" [ngStyle]=\"styles.registration_date\"\n                 (change)=\"data.registration_date=$event.target.value\"></div>\n        <br>\n        <h5 class=\"text-info\">Test Attributes</h5>\n        <div><label>device test date</label>\n          <input class=\"pull-right\" type=\"text\" [value]=\"data.device_test_date | date:'yyyy-MM-dd'\" [ngStyle]=\"styles.device_test_date\"\n                 (change)=\"data.device_test_date=$event.target.value\"></div>\n        <div><label>device suspend date</label>\n          <input class=\"pull-right\" type=\"text\" [value]=\"data.device_suspension_date | date:'yyyy-MM-dd'\"  [ngStyle]=\"styles.device_suspension_date\"\n                 (change)=\"data.device_suspension_date=$event.target.value\"></div>\n        <br>\n        <h5 class=\"text-info\">Lease</h5>\n        <div><label>lease</label>\n          <select class=\"pull-right\" [(ngModel)]=\"data.data\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label>lease price per month</label><input class=\"pull-right\" type=\"text\" [(ngModel)]=\"data.lease_price_per_month\"></div>\n        <div><label>lease start date</label>\n          <input class=\"pull-right\" type=\"text\" [value]=\"data.lease_start_date | date:'yyyy-MM-dd'\" [ngStyle]=\"styles.lease_start_date\"\n                 (change)=\"data.lease_start_date=$event.target.value\"></div>\n        <div><label>lease end date</label>\n          <input class=\"pull-right\" type=\"text\" [value]=\"data.lease_end_date | date:'yyyy-MM-dd'\" [ngStyle]=\"styles.lease_end_date\"\n                 (change)=\"data.lease_end_date=$event.target.value\"></div>\n      </div>\n    </div>\n    <br>\n    <button type=\"button\" class=\"btn btn-secondary col-sm-2\" (click)=\"activeModal.dismiss()\">Cancel</button>\n    <button type=\"button\" class=\"btn btn-danger col-sm-2 pull-right\" (click)=\"update(data)\">Update</button>\n    <br>\n  </div>\n</div>\n"
 
 /***/ }),
 
+/***/ 486:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n  <h4 class=\"modal-title\">Create New</h4>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"container insert\">\n    <div *ngIf=\"error\" class=\"text-danger\">{{error}}</div>\n    <div class=\"greyarea\">\n      <h5 class=\"text-success\">Device Feature</h5>\n      <div ><label >Device SN *</label>\n        <input class=\"float-sm-right\" type=\"text\" [(ngModel)]=\"data.device_sn\" name=\"device_sn\" #device_sn=\"ngModel\" required>\n        <div *ngIf=\"device_sn.errors.required && device_sn.touched\" class=\"form_msg text-right\">Device SN is Required</div>\n      </div>\n      <div ><label >status</label>\n        <select class=\"float-sm-right\" [(ngModel)]=\"data.status\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let s of options?.status\" [value]=\"s\">{{s}}</option>\n        </select>\n      </div>\n      <div ><label >location</label>\n        <select  [(ngModel)]=\"data.location\" class=\"float-sm-right\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let location of options?.location\" [value]=\"location\">{{location}}</option>\n        </select>\n      </div>\n      <div ><label >parent clinic</label>\n        <input class=\"float-sm-right\" type=\"text\"  [(ngModel)]=\"data.parent_clinic\"  [ngbTypeahead]=\"searchParentClinic\">\n      </div>\n      <div ><label >sub clinic</label>\n        <input class=\"float-sm-right\" type=\"text\"  [(ngModel)]=\"data.sub_clinic\" [ngbTypeahead]=\"searchSubClinic\" >\n      </div>\n      <div ><label >Checked out by</label>\n        <select  [(ngModel)]=\"data.checked_out_by\" class=\"float-sm-right\">\n          <option value=''></option>\n          <option *ngFor=\"let m of options?.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div >\n        <label >checked out date</label>\n        <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.checked_out_date\">\n      </div>\n      <p>Or</p>\n      <div ><label >checked in by</label>\n        <select  [(ngModel)]=\"data.checked_in_by\" class=\"float-sm-right\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let m of options?.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div ><label >checked in date</label>\n        <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.checked_in_date\">\n      </div>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h5 class=\"text-primary\">Device Attributes</h5>\n        <div ><label >iccid</label><input class=\"float-sm-right\" type=\"text\"   [(ngModel)]=\"data.iccid\"></div>\n        <div ><label>imei</label><input class=\"float-sm-right\" type=\"text\"   [(ngModel)]=\"data.imei\"></div>\n        <div ><label >model number</label><input class=\"float-sm-right\"   type=\"text\" [(ngModel)]=\"data.model_number\"></div>\n        <div ><label >points to</label>\n          <select  [(ngModel)]=\"data.points_to\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.points_to\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div >\n          <label >model description</label>\n          <select  [(ngModel)]=\"data.model_description\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.model_description\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div>\n          <label >manufacturer</label>\n          <select  [(ngModel)]=\"data.manufacturer\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.manufacturer\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div>\n          <label >firmware version</label>\n          <select  [(ngModel)]=\"data.firmware_version\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.firmware_version\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label >zywie logo</label>\n          <select  [(ngModel)]=\"data.zywie_logo\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <br>\n        <h5 class=\"text-primary\">SIM Attributes</h5>\n        <div>\n          <label>sim provider</label>\n          <select  [(ngModel)]=\"data.sim_provider\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.sim_provider\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label>wyless provision_date</label>\n          <input class=\"float-sm-right\"   type=\"date\" [(ngModel)]=\"data.wyless_provision_date\">\n        </div>\n        <div><label>use zywie sim</label>\n          <select  [(ngModel)]=\"data.use_zywie_sim\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <h5 class=\"text-primary\">Order Atrributes</h5>\n        <div><label>purchase order</label><input class=\"float-sm-right\"  type=\"text\" [(ngModel)]=\"data.purchase_order\"></div>\n        <div><label>registration date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.registration_date\">\n        </div>\n        <br>\n        <h5 class=\"text-info\">Test Attributes</h5>\n        <div><label>device test date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.device_test_date\">\n        </div>\n        <div><label>device suspend date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.device_suspension_date\">\n        </div>\n        <br>\n        <h5 class=\"text-info\">Lease</h5>\n        <div><label>lease</label>\n          <select  [(ngModel)]=\"data.lease\" class=\"float-sm-right\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options?.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label>lease price per month</label><input class=\"float-sm-right\"  type=\"text\" [(ngModel)]=\"data.lease_price_per_month\"></div>\n        <div><label>lease start date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.lease_start_date\">\n        </div>\n        <div><label>lease end date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.lease_end_date\">\n        </div>\n      </div>\n    </div>\n    <br>\n    <button type=\"button\" class=\"btn btn-secondary col-sm-2\" (click)=\"activeModal.dismiss()\">Cancel</button>\n    <button type=\"button\" class=\"btn btn-danger offset-sm-6 col-sm-2\" (click)=\"insert(data)\">Add</button>\n  </div>\n</div>\n\n\n"
+
+/***/ }),
+
 /***/ 487:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-header\">\n  <h4 class=\"modal-title\">Create New</h4>\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss()\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"container insert\">\n    <div *ngIf=\"error\" class=\"text-danger\">{{error}}</div>\n    <div class=\"greyarea\">\n      <h5 class=\"text-success\">Device Feature</h5>\n      <div ><label >Device SN *</label>\n        <input class=\"float-sm-right\" type=\"text\" [(ngModel)]=\"data.device_sn\" name=\"device_sn\" #device_sn=\"ngModel\" required>\n        <div *ngIf=\"device_sn.errors?.required && device_sn.touched\" class=\"form_msg text-right\">Device SN is Required</div>\n      </div>\n      <div ><label >status</label>\n        <select class=\"float-sm-right\" [(ngModel)]=\"data.status\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let s of options.status\" [value]=\"s\">{{s}}</option>\n        </select>\n      </div>\n      <div ><label >location</label>\n        <select  [(ngModel)]=\"data.location\" class=\"float-sm-right\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let location of options.location\" [value]=\"location\">{{location}}</option>\n        </select>\n      </div>\n      <div ><label >parent clinic</label>\n        <input class=\"float-sm-right\" type=\"text\"  [(ngModel)]=\"data.parent_clinic\"  [ngbTypeahead]=\"searchParentClinic\">\n      </div>\n      <div ><label >sub clinic</label>\n        <input class=\"float-sm-right\" type=\"text\"  [(ngModel)]=\"data.sub_clinic\" [ngbTypeahead]=\"searchSubClinic\" >\n      </div>\n      <div ><label >Checked out by</label>\n        <select  [(ngModel)]=\"data.checked_out_by\" class=\"float-sm-right\">\n          <option value=''></option>\n          <option *ngFor=\"let m of options.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div >\n        <label >checked out date</label>\n        <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.checked_out_date\">\n      </div>\n      <p>Or</p>\n      <div ><label >checked in by</label>\n        <select  [(ngModel)]=\"data.checked_in_by\" class=\"float-sm-right\">\n          <option value=\"\"></option>\n          <option *ngFor=\"let m of options.checked_by\" [value]=\"m\">{{m}}</option>\n        </select>\n      </div>\n      <div ><label >checked in date</label>\n        <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.checked_in_date\">\n      </div>\n    </div>\n    <br>\n    <div class=\"row\">\n      <div class=\"col-sm-6\">\n        <h5 class=\"text-primary\">Device Attributes</h5>\n        <div ><label >iccid</label><input class=\"float-sm-right\" type=\"text\"   [(ngModel)]=\"data.iccid\"></div>\n        <div ><label>imei</label><input class=\"float-sm-right\" type=\"text\"   [(ngModel)]=\"data.imei\"></div>\n        <div ><label >model number</label><input class=\"float-sm-right\"   type=\"text\" [(ngModel)]=\"data.model_number\"></div>\n        <div ><label >points to</label>\n          <select  [(ngModel)]=\"data.points_to\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.points_to\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div >\n          <label >model description</label>\n          <select  [(ngModel)]=\"data.model_description\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.model_description\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div>\n          <label >manufacturer</label>\n          <select  [(ngModel)]=\"data.manufacturer\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.manufacturer\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div>\n          <label >firmware version</label>\n          <select  [(ngModel)]=\"data.firmware_version\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.firmware_version\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label >zywie logo</label>\n          <select  [(ngModel)]=\"data.zywie_logo\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <br>\n        <h5 class=\"text-primary\">SIM Attributes</h5>\n        <div>\n          <label>sim provider</label>\n          <select  [(ngModel)]=\"data.sim_provider\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.sim_provider\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label>wyless provision_date</label>\n          <input class=\"float-sm-right\"   type=\"date\" [(ngModel)]=\"data.wyless_provision_date\">\n        </div>\n        <div><label>use zywie sim</label>\n          <select  [(ngModel)]=\"data.use_zywie_sim\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <h5 class=\"text-primary\">Order Atrributes</h5>\n        <div><label>purchase order</label><input class=\"float-sm-right\"  type=\"text\" [(ngModel)]=\"data.purchase_order\"></div>\n        <div><label>registration date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.registration_date\">\n        </div>\n        <br>\n        <h5 class=\"text-info\">Test Attributes</h5>\n        <div><label>device test date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.device_test_date\">\n        </div>\n        <div><label>device suspend date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.device_suspension_date\">\n        </div>\n        <br>\n        <h5 class=\"text-info\">Lease</h5>\n        <div><label>lease</label>\n          <select  [(ngModel)]=\"data.data\" class=\"float-sm-right\" class=\"float-sm-right\">\n            <option value=\"\"></option>\n            <option *ngFor=\"let m of options.yesOrNo\" [value]=\"m\">{{m}}</option>\n          </select>\n        </div>\n        <div><label>lease price per month</label><input class=\"float-sm-right\"  type=\"text\" [(ngModel)]=\"data.lease_price_per_month\"></div>\n        <div><label>lease start date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.lease_start_date\">\n        </div>\n        <div><label>lease end date</label>\n          <input class=\"float-sm-right\"  type=\"date\" [(ngModel)]=\"data.lease_end_date\">\n        </div>\n      </div>\n    </div>\n    <br>\n    <button type=\"button\" class=\"btn btn-secondary col-sm-2\" (click)=\"activeModal.dismiss()\">Cancel</button>\n    <button type=\"button\" class=\"btn btn-danger offset-sm-6 col-sm-2\" (click)=\"insert(data)\">Add</button>\n  </div>\n</div>\n\n\n"
+module.exports = "<div class=\"container\" *ngIf=\"username\">\n  <br><br><br><br>\n  <h4>Welcome {{username}}</h4>\n  <br><br><br><br>\n  <br><br><br><br>\n  <br><br><br><br>\n  <br><br><br><br>\n  <br><br><br><br>\n\n</div>\n"
 
 /***/ }),
 
 /***/ 488:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p>\n<p>\n  homepage works!\n</p><p>\n  homepage works!\n</p>v\n<p>\n  homepage works!\n</p>\n\n\n"
+module.exports = "<div class=\"login-container\">\n  <div class=\"login-box\">\n    <ngb-alert *ngIf=\"alert.successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n    <form #loginForm=\"ngForm\">\n      <div class=\"form-group row\">\n        <label for=\"email\" class=\"col-sm-3 col-form-label\">Email:</label>\n        <div class=\"col-sm-9\">\n          <input type=\"text\" id=\"email\" name='userEmail' class=\"form-control\" [(ngModel)]=\"user.username\"  pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"\n                 placeholder=\"email\" required  #email=\"ngModel\">\n        </div>\n      </div>\n      <div class=\"form-group row\">\n        <label for=\"pwd\" class=\"col-sm-3 col-form-label\">Password: <span class=\"fa fa-key\"></span></label>\n        <div class=\"col-sm-9\">\n          <input  type=\"password\" id=\"pwd\" name=\"password\" class=\"form-control\" [(ngModel)]=\"user.password\"\n                  placeholder=\"password\" required #pwd=\"ngModel\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <button type=\"submit\"  class=\"btn btn-danger offset-sm-3 col-sm-9\" (click)=\"submit(user)\" >log in</button>\n      </div>\n      <div class=\"form-actions\">\n        <br>\n        <a uiSref=\"signup\">Do not have an account, sign up here</a>\n      </div>\n    </form>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
 /***/ 489:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-container\">\n  <div class=\"login-box\">\n    <ngb-alert *ngIf=\"successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n    <form #loginForm=\"ngForm\">\n      <div class=\"form-group row\">\n        <label for=\"email\" class=\"col-sm-3 col-form-label\">Email:</label>\n        <div class=\"col-sm-9\">\n          <input type=\"text\" id=\"email\" name='userEmail' class=\"form-control\" [(ngModel)]=\"user.email\"  pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\"\n                 placeholder=\"email\" required  #email=\"ngModel\">\n        </div>\n      </div>\n      <div class=\"form-group row\">\n        <label for=\"pwd\" class=\"col-sm-3 col-form-label\">Password: <span class=\"fa fa-key\"></span></label>\n        <div class=\"col-sm-9\">\n          <input  type=\"password\" id=\"pwd\" name=\"password\" class=\"form-control\" [(ngModel)]=\"user.password\"\n                  placeholder=\"password\" required #pwd=\"ngModel\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <button type=\"submit\"  class=\"btn btn-danger offset-sm-3 col-sm-9\" (click)=\"submit(user)\" >log in</button>\n      </div>\n      <div class=\"form-actions\">\n        <br>\n        <a uiSref=\"signup\">Do not have an account, sign up here</a>\n      </div>\n    </form>\n  </div>\n</div>\n\n"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" uiSref=\"public.home\">\n    <i class=\"fa fa-home fa-2x\"></i>\n  </a>\n  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.dashboard\" uiSrefActive=\"active\">\n          <span class=\"fa fa-dashboard fa-2x\"></span>\n          <br class=\"hidden-xs\">Dashboard\n        </a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle text-center\"  uiSrefActive=\"active\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-book fa-2x\"></span><br class=\"hidden-xs\">Device Management\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceManagement\">Device Management</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceHistory\">Device History</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceInventory\">Device Inventory</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.accessoryInventory\">Accessory Inventory</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.customerManagement\" uiSrefActive=\"active\">\n          <span class=\"fa fa-address-card fa-2x\"></span><br class=\"hidden-xs\">Customer\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\"  uiSrefActive=\"active\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-user-o fa-2x\"></span><br class=\"hidden-xs\">Account\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\" uiSrefActive=\"active\">\n          <button class=\"dropdown-item\" uiSrefActive=\"active\"  (click)=\"logout()\">Log Out</button>\n        </div>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<ui-view></ui-view>\n\n<br><br><br><br><br><br>\n\n<footer class=\"panel-footer\">\n  <div class=\"text-center\">\n    &copy; Copyright Hong He 2017\n  </div>\n</footer>\n"
 
 /***/ }),
 
 /***/ 490:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" uiSref=\"public.home\">\n    <i class=\"fa fa-home fa-2x\"></i>\n  </a>\n  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.dashboard\" uiSrefActive=\"active\">\n          <span class=\"fa fa-dashboard fa-2x\"></span>\n          <br class=\"hidden-xs\">Dashboard\n        </a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle text-center\"  uiSrefActive=\"active\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-book fa-2x\"></span><br class=\"hidden-xs\">Device Management\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceManagement\">Device Management</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceHistory\">Device History</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceInventory\">Device Inventory</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.accessoryInventory\">Accessory Inventory</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.customerManagement\" uiSrefActive=\"active\">\n          <span class=\"fa fa-address-card fa-2x\"></span><br class=\"hidden-xs\">Customer\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\"  uiSrefActive=\"active\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-user-o fa-2x\"></span><br class=\"hidden-xs\">User Account\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\" uiSrefActive=\"active\">\n          <a class=\"nav-link\" uiSref=\"login\" >Log Out</a>\n        </div>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<ui-view></ui-view>\n\n<br><br><br><br><br><br>\n\n<footer class=\"panel-footer\">\n  <div class=\"text-center\">\n    &copy; Copyright Hong He 2017\n  </div>\n</footer>\n"
+module.exports = "\n<div class=\"container register-box\" [hidden]=\"submitted\">\n  <ngb-alert *ngIf=\"alert.successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n  <form #registerForm='ngForm'>\n    <h3 class=\"text-center\">Registration</h3>\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"firstName\" name=\"firstName\" aria-describedby=\"firstNameHelp\"\n             placeholder=\"Your First Name\" [(ngModel)]=\"user.first_name\" required #firstName=\"ngModel\">\n      <div *ngIf=\"firstName.errors && firstName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"firstName.errors && firstName.errors.required\">first name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"lastName\" name=\"lastName\" placeholder=\"Your Last Name\" aria-describedby=\"lastNameHelp\"\n             [(ngModel)]=\"user.last_name\"  required #lastName=\"ngModel\">\n      <div *ngIf=\"lastName.errors && lastName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"lastName.errors.required\">last name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">Email:</label>\n      <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" aria-describedby=\"emailHelp\"\n             pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" [(ngModel)]=\"user.email\" required  #email=\"ngModel\">\n      <div *ngIf=\"email.errors && email.touched\">\n        <span class=\"form_msg \"  *ngIf=\"email.errors.required\">last name is required</span>\n        <span class=\"form_msg \"  *ngIf=\"email.errors.pattern\">Must be a valid email address: handle@domain format</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" id=\"pwd\" name=\"pwd\" placeholder=\"Password\" aria-describedby=\"pwdHelp\"\n             [(ngModel)]=\"user.password\"  required #pwd=\"ngModel\">\n      <div *ngIf=\"pwd.errors && pwd.touched\">\n        <span class=\"form_msg\" *ngIf=\"pwd.errors.required\">password is required</span>\n      </div>\n    </div>\n    <!--enter password again-->\n    <div class=\"form-group\">\n      <label for=\"pwd2\">Confirm Password:</label>\n      <input type=\"password\" class=\"form-control\" name=\"pwd2\" id=\"pwd2\" placeholder=\" Confirm Password\"  aria-describedby=\"pwd2Help\"\n             [(ngModel)]=\"user.password2\"  required #pwd2=\"ngModel\">\n    </div>\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-success\" (click)=\"submit(user)\" [disabled]=\"registerForm.form.invalid\">sign up</button>\n    </div>\n  </form>\n  <br>\n  <a uiSref=\"login\">Already have an account, sign in here</a>\n  <br><br><br>\n</div>\n\n\n<div class=\"submitSuccess\" [hidden]=\"!submitted\">\n  <h2>Thank you, you have successfully submitted!</h2>\n  <a uiSref=\"login\">log in here...</a>\n</div>\n"
 
 /***/ }),
 
-/***/ 491:
-/***/ (function(module, exports) {
+/***/ 58:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\n<div class=\"container register-box\" [hidden]=\"submitted\">\n  <ngb-alert *ngIf=\"successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n  <form #registerForm='ngForm'>\n    <h3 class=\"text-center\">Registration</h3>\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"firstName\" name=\"firstName\" aria-describedby=\"firstNameHelp\"\n             placeholder=\"Your First Name\" [(ngModel)]=\"user.firstName\" required #firstName=\"ngModel\">\n      <div *ngIf=\"firstName.errors && firstName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"firstName.errors && firstName.errors.required\">first name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"lastName\" name=\"lastName\" placeholder=\"Your Last Name\" aria-describedby=\"lastNameHelp\"\n             [(ngModel)]=\"user.lastName\"  required #lastName=\"ngModel\">\n      <div *ngIf=\"lastName.errors && lastName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"lastName.errors.required\">last name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">Email:</label>\n      <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" aria-describedby=\"emailHelp\"\n             pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" [(ngModel)]=\"user.email\" required  #email=\"ngModel\">\n      <div *ngIf=\"email.errors && email.touched\">\n        <span class=\"form_msg \"  *ngIf=\"email.errors.required\">last name is required</span>\n        <span class=\"form_msg \"  *ngIf=\"email.errors.pattern\">Must be a valid email address: handle@domain format</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" id=\"pwd\" name=\"pwd\" placeholder=\"Password\" aria-describedby=\"pwdHelp\"\n             [(ngModel)]=\"user.pwd\"  required #pwd=\"ngModel\">\n      <div *ngIf=\"pwd.errors && pwd.touched\">\n        <span class=\"form_msg\" *ngIf=\"pwd.errors.required\">password is required</span>\n      </div>\n    </div>\n    <!--enter password again-->\n    <div class=\"form-group\">\n      <label for=\"pwd2\">Confirm Password:</label>\n      <input type=\"password\" class=\"form-control\" name=\"pwd2\" id=\"pwd2\" placeholder=\" Confirm Password\"  aria-describedby=\"pwd2Help\"\n             [(ngModel)]=\"user.pwd2\"  required #pwd2=\"ngModel\">\n    </div>\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-success\" (click)=\"submit(user)\" [disabled]=\"registerForm.form.invalid\">sign up</button>\n    </div>\n  </form>\n  <br>\n  <a uiSref=\"login\">Already have an account, sign in here!</a>\n  <br><br><br>\n</div>\n\n<div [hidden]=\"!submitted\">\n  <h2>Thank you, you have successfully submitted!</h2>\n  <a uiSref=\"login\">log in here...</a>\n</div>\n"
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedVariables; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var SharedVariables = (function () {
+    function SharedVariables() {
+        this.username = null;
+    }
+    return SharedVariables;
+}());
+SharedVariables = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+], SharedVariables);
+
+//# sourceMappingURL=shared.variables.js.map
 
 /***/ }),
 
-/***/ 492:
-/***/ (function(module, exports) {
-
-module.exports = "<!--<input class=\"pull-right\" [(ngModel)]=\"data.parent_clinic\" [ngbTypeahead]=\"search\">-->\n"
-
-/***/ }),
-
-/***/ 747:
+/***/ 745:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(313);
+module.exports = __webpack_require__(315);
 
 
 /***/ })
 
-},[747]);
+},[745]);
 //# sourceMappingURL=main.bundle.js.map
