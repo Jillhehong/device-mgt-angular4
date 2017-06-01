@@ -19,7 +19,7 @@ const pgp = require('pg-promise')({  }); // pg-promise module is to connect expr
 const db = pgp(config); //connect database with configuration
 const stringify = require('csv-stringify');
 const moment = require('moment');
-const cors = require("cors");
+// const cors = require("cors");
 const passport = require('passport'); //passport.js
 // passport-local lets you authenticate using a username and password in your Node.js applications.
 const LocalStrategy = require('passport-local').Strategy;
@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+// app.use(cors());
 
 app.use(session({
     secret: 'd3kfd20g83jlvn27c04cke037gfjp',
@@ -60,10 +60,10 @@ passport.deserializeUser(function(user, done) {
 });
 
 
-// render index.html at the starting url
-//app.get('/', function (req, res) {
-//   res.sendfile('views/index.html');
-//});
+///////Catch login routes and return the index file
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 //get data using pg-promise module
 function pgGetSqlUtilityFunc(url, sql) {
@@ -326,10 +326,6 @@ app.post('/authenticateUser', passport.authenticate('local'), function (req, res
 ///////////////////////////////////log out//////////////////////////////////////////////////////////////////////////////////
 app.get("/logout", (req, res) => {
     req.session.destroy(  (err) => {  res.end() });
-});
-//////////////////////////////Catch login routes and return the index file///////////////////////////////////////////////////////////////////////////////////////
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
