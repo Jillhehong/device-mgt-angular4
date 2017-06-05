@@ -34,7 +34,7 @@ var EditDeviceHistoryComponent = (function () {
         var _this = this;
         this.deviceService = deviceService;
         this.activeModal = activeModal;
-        this.deviceOwner = [];
+        this.deviceOwner = []; // store device_owner variable
         this.styles = { history_date_style: null, replaced_device_SN_style: null };
         this.formatter = function (x) { return x.device_owner; };
         // typeahead
@@ -69,7 +69,7 @@ var EditDeviceHistoryComponent = (function () {
             this.styles.replaced_device_SN_style = { 'background-color': 'pink' };
         }
         else {
-            //convert empty value into null
+            //convert empty value into null before submitting to server database
             Object.keys(value).forEach(function (key) {
                 if (value[key] == '') {
                     value[key] = null;
@@ -171,7 +171,7 @@ var InsertDeviceHistoryComponent = (function () {
             this.styles.replaced_device_SN_style = { 'background-color': 'pink' };
         }
         else {
-            //convert empty value into null
+            //convert empty strings to null value before submitting to server database
             Object.keys(value).forEach(function (key) {
                 if (value[key] == '') {
                     value[key] = null;
@@ -235,10 +235,11 @@ var EditDeviceManagementModalComponent = (function () {
         var _this = this;
         this.activeModal = activeModal;
         this.deviceService = deviceService;
-        this.parent_clinic = []; // define type and initialize an empty value so that you can use its push method below
-        this.sub_clinic = [];
+        this.parent_clinic = []; // initialize an empty array, so we can use array's method push()
+        this.sub_clinic = []; // parent_clinic, sub_clinic are for typeahead search
         this.styles = { checked_out_date: '', checked_in_date: '', wyless_provision_date: '', registration_date: '',
             device_test_date: '', device_suspension_date: '', lease_start_date: '', lease_end_date: '' };
+        // perform ng-boostrap typeahead for parent_clinic. see at https://ng-bootstrap.github.io/#/components/typeahead
         this.searchParentClinic = function (text$) {
             return text$
                 .debounceTime(200)
@@ -246,6 +247,7 @@ var EditDeviceManagementModalComponent = (function () {
                 .map(function (term) { return term.length < 2 ? []
                 : _this.parent_clinic.filter(function (v) { return v.toLowerCase().indexOf(term.toLowerCase()) > -1; }).slice(0, 10); });
         };
+        // perform ng-boostrap typeahead for sub_clinic.
         this.searchSubClinic = function (text$) {
             return text$
                 .debounceTime(200)
@@ -256,42 +258,31 @@ var EditDeviceManagementModalComponent = (function () {
     }
     EditDeviceManagementModalComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.options = this.deviceService.getDeviceMgtSelectOptions();
-        // get parent_clinic
+        this.options = this.deviceService.getDeviceMgtSelectOptions(); // get select options from angular service
+        // get parent_clinic from server
         this.deviceService.getData('/deviceMgt/get/parent_clinic').subscribe(function (res) {
             console.log('test');
             console.log(_this.parent_clinic);
             res.forEach(function (value) { return _this.parent_clinic.push(value.parent_clinic); });
         }, function (res) { return console.log(res); });
-        //get sub clinic
+        //get sub clinic from server
         this.deviceService.getData('/deviceMgt/get/sub_clinic').subscribe(function (res) {
             res.forEach(function (value) { return _this.sub_clinic.push(value.sub_clinic); });
         }, function (res) { return console.log(res); });
     };
     EditDeviceManagementModalComponent.prototype.update = function (value) {
         var _this = this;
-        // let error: string;
-        // validation
-        // Object.keys(value).forEach( key=> {
-        //   if(key.indexOf('date') !== -1 && !moment(value[key], 'YYYY-MM-DD', true).isValid()) {
-        //     this.styles[key] = {'background-color': '#f2dede'};
-        //   }
-        // });
-        //convert empty value into null
+        //prepare value as (key value) object and initialize it null values
         Object.keys(value).forEach(function (key) {
             if (value[key] == '') {
-                value[key] = null;
-                console.log(value[key]);
+                value[key] = null; // initialize as empty value
             }
         });
         this.deviceService.postData('/deviceMgt/update', value)
             .subscribe(function (res) {
-            console.log('test ', res);
             _this.activeModal.close();
         }, function (err) {
-            console.log(err);
             _this.error = err.statusText + '. Check your input (eg: date format: yyyy-mm-dd)';
-            console.log(err);
         });
     };
     return EditDeviceManagementModalComponent;
@@ -348,46 +339,12 @@ var InsertDeviceMgtModalComponent = (function () {
         var _this = this;
         this.activeModal = activeModal;
         this.deviceService = deviceService;
-        this.parent_clinic = [];
-        this.sub_clinic = [];
-        this.data = {};
-        // data = {
-        //   purchase_order: null,
-        //   registration_date: null,
-        //   device_sn: null,
-        //   iccid: null,
-        //   imei: null,
-        //   model_number: null,
-        //   model_description: null,
-        //   firmware_version: null,
-        //   manufacturer: null,
-        //   points_to: null,
-        //   use_zywie_sim: null,
-        //   sim_provider: null,
-        //   zywie_logo: null,
-        //   wyless_provision_date: null,
-        //   device_test_date: null,
-        //   device_suspension_date: null,
-        //   status: null,
-        //   location: null,
-        //   checked_out_by: null,
-        //   checked_out_date: null,
-        //   checked_in_by: null,
-        //   checked_in_date: null,
-        //   salesteam: null,
-        //   salesperson_name: null,
-        //   enterprise_id: null,
-        //   parent_clinic: null,
-        //   sub_clinic: null,
-        //   physician: null,
-        //   billable: null,
-        //   lease: null,
-        //   lease_price_per_month: null,
-        //   lease_start_date: null,
-        //   lease_end_date: null
-        // };
+        this.parent_clinic = []; // store individual parent clinics, pulled from server
+        this.sub_clinic = []; // store individual sub clinics
+        this.data = {}; // store input data
         this.styles = { checked_out_date: '', checked_in_date: '', wyless_provision_date: '', registration_date: '',
             device_test_date: '', device_suspension_date: '', lease_start_date: '', lease_end_date: '' };
+        // perform ng-boostrap typeahead for parent clinics
         this.searchParentClinic = function (text$) {
             return text$
                 .debounceTime(200)
@@ -395,6 +352,7 @@ var InsertDeviceMgtModalComponent = (function () {
                 .map(function (term) { return term.length < 2 ? []
                 : _this.parent_clinic.filter(function (v) { return v.toLowerCase().indexOf(term.toLowerCase()) > -1; }).slice(0, 10); });
         };
+        // perform ng-boostrap typeahead for sub clinics
         this.searchSubClinic = function (text$) {
             return text$
                 .debounceTime(200)
@@ -402,16 +360,15 @@ var InsertDeviceMgtModalComponent = (function () {
                 .map(function (term) { return term.length < 2 ? []
                 : _this.sub_clinic.filter(function (v) { return v.toLowerCase().indexOf(term.toLowerCase()) > -1; }).slice(0, 10); });
         };
-        // this.parent_clinic = this.bind(this);
     }
     InsertDeviceMgtModalComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.options = this.deviceService.getDeviceMgtSelectOptions();
-        // initialize data input for ngModel
+        // prepare data varibales in use of ngModel
         this.deviceService.getDeviceMgtColumns().forEach(function (value) {
             _this.data[value] = null;
         });
-        // get parent clinic
+        // get parent clinics
         this.deviceService.getData('/deviceMgt/get/parent_clinic').subscribe(function (res) {
             res.forEach(function (value) {
                 _this.parent_clinic.push(value.parent_clinic);
@@ -419,9 +376,8 @@ var InsertDeviceMgtModalComponent = (function () {
         }, function (err) {
             console.log(err);
         });
-        // get sub clinic
+        // get sub clinics
         this.deviceService.getData('/deviceMgt/get/sub_clinic').subscribe(function (res) {
-            // this.sub_clinic = res;
             res.forEach(function (value) {
                 _this.sub_clinic.push(value.sub_clinic);
             });
@@ -432,16 +388,11 @@ var InsertDeviceMgtModalComponent = (function () {
     ;
     InsertDeviceMgtModalComponent.prototype.insert = function (value) {
         var _this = this;
-        console.log('test');
-        console.log('test', value);
         this.deviceService.postData('/deviceMgt/insert', value)
             .subscribe(function (res) {
-            console.log('test ', res);
             _this.activeModal.close();
         }, function (err) {
-            console.log(err);
             _this.error = err.statusText + '. Check your input';
-            console.log(err);
         });
     };
     return InsertDeviceMgtModalComponent;
@@ -484,13 +435,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+/* rxjs, the reactive extension javascript library see at https://github.com/Reactive-Extensions/RxJS
+compared to promise, observables = promises + events.  you can apply some operators in them (like map, ...).
+This allows to handle asynchronous things in a very flexible way
+see at https://stackoverflow.com/questions/34671715/angular2-http-get-map-subscribe-and-observable-pattern-basic-understan */
 
 
 
 var DeviceService = (function () {
+    /* The Constructor is a default method of the class that is executed when the class is
+    instantiated and ensures proper initialization of fields in the class and its subclasses.
+   use constructor() to setup Dependency Injection*/
     function DeviceService(http) {
         this.http = http;
         // Api: string = 'http://localhost:3000';
+        // store variable as the device_management table columns
         this.device_Mgt_table_columns = [
             'purchase_order',
             'registration_date',
@@ -526,6 +485,7 @@ var DeviceService = (function () {
             'lease_start_date',
             'lease_end_date'
         ];
+        // store variable as device_inventory table columns
         this.device_inventory_table_columns = [
             'received_date',
             'order_id',
@@ -540,6 +500,7 @@ var DeviceService = (function () {
             'device_sn',
             'package_content'
         ];
+        // store variable as accessory_inventory table columns
         this.accessory_inventory_table_columns = [
             'row',
             'received_date',
@@ -555,6 +516,7 @@ var DeviceService = (function () {
             'shipping_status',
             'total_price'
         ];
+        // store variable as device_history table columns
         this.device_history_table_columns = [
             'row',
             'history_date',
@@ -567,7 +529,7 @@ var DeviceService = (function () {
             'replaced_device_sn',
             'note'
         ];
-        // select options data in device management page
+        // a list of select options for use in device management page
         this.selectOptions = {
             devidceMgtoptions: {
                 model_description: ['Aera CT 2G', 'Aera CT 3G'],
@@ -650,8 +612,7 @@ var DeviceService = (function () {
                 ]
             }
         };
-        this.deviceHistory = {};
-    }
+    } // called first time before the ngOnInit()
     DeviceService.prototype.getDeviceMgtColumns = function () {
         return this.device_Mgt_table_columns;
     };
@@ -670,13 +631,14 @@ var DeviceService = (function () {
     DeviceService.prototype.getDeviceHistorySelectOptions = function () {
         return this.selectOptions.deviceHistoryOptions;
     };
-    // http service
+    // http get service
     DeviceService.prototype.getData = function (url) {
         return this.http.get(url)
-            .map(function (response) { return response.json(); })
-            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_rx__["Observable"].throw(error); });
+            .map(function (response) { return response.json(); }) // map data to be json type
+            .catch(function (error) { return __WEBPACK_IMPORTED_MODULE_2_rxjs_rx__["Observable"].throw(error); }); // catch error
     };
     ;
+    // http post service
     DeviceService.prototype.postData = function (url, data) {
         return this.http.post(url, data)
             .map(function (res) { return res.json(); })
@@ -765,33 +727,32 @@ AppComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(324);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__ = __webpack_require__(328);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__ = __webpack_require__(333);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__ = __webpack_require__(332);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__service_device_service__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__ = __webpack_require__(334);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ng2_smart_table__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ngx_pagination__ = __webpack_require__(474);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_common__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_mgt_public_public_component__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__device_mgt_homepage_homepage_component__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_management_device_mgt_component__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__device_mgt_device_history_device_history_component__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__device_mgt_device_inventory_device_inventory_component__ = __webpack_require__(330);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__device_mgt_accessory_inventory_accessory_inventory_component__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__device_mgt_customer_management_customer_management_component__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__device_mgt_dashboard_dashboard_component__ = __webpack_require__(328);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__device_mgt_signup_signup_component__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__device_mgt_login_login_component__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__device_mgt_device_history_edit_edit_modal__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_history_insert_insert_modal__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__service_device_service__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__shared_shared_variables__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ng_bootstrap_ng_bootstrap__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng2_smart_table__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_ngx_pagination__ = __webpack_require__(474);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_charts__ = __webpack_require__(431);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__shared_shared_variables__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__shared_uiRouter_config__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__shared_uiRouter_config__ = __webpack_require__(336);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -802,48 +763,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+ // import Http if use Forms in html
+// import ui-router module. Compared with Angular2 Router, ui-router can render multiple states and nested substates
 
-// import {Injector} from '@angular/core';
- // import ui-router
-
-
-
+// import component
 
 
 
 
- // import signup page
- // import login page
 
+
+
+
+
+
+
+
+
+
+
+// import anuglar2 service and shared variables
  // import service
+
+// import angular2 modules
  // import ng-bootstrap
-
  // import ng2-smart-table
+ // import ngx-pagination for pagination
 
- // import the module
-
-
-
-
-
-
- // import config ui-router
+ // import config function for UIRouter config
+// ui-router states and config
 var routes = {
     states: [
-        { name: 'public', abstract: true, component: __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__["a" /* PublicComponent */] },
-        { name: 'public.home', url: '/home', component: __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */] },
-        { name: 'public.dashboard', url: '/dashboard', component: __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__["a" /* DashboardComponent */] },
-        { name: 'public.deviceManagement', url: '/deviceManagement', component: __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__["a" /* DeviceManagementComponent */] },
-        { name: 'public.deviceHistory', url: '/deviceHistory', component: __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__["a" /* DeviceHistoryComponent */] },
-        { name: 'public.editDeviceHistory', url: '/deviceHistory/edit', component: __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */] },
-        { name: 'public.insertDeviceHistory', url: '/deviceHistory/insert', component: __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */] },
-        { name: 'public.deviceInventory', url: '/deviceInventory', component: __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__["a" /* DeviceInventoryComponent */] },
-        { name: 'public.accessoryInventory', url: '/accessoryInventory', component: __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__["a" /* AccessoryInventoryComponent */] },
-        { name: 'public.customerManagement', url: '/customerManagement', component: __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__["a" /* CustomerManagementComponent */] },
-        { name: 'login', url: '/login', component: __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__["a" /* LoginComponent */] },
-        { name: 'signup', url: '/signup', component: __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__["a" /* SignupComponent */] }
+        { name: 'public', abstract: true, component: __WEBPACK_IMPORTED_MODULE_6__device_mgt_public_public_component__["a" /* PublicComponent */] },
+        { name: 'public.home', url: '/home', component: __WEBPACK_IMPORTED_MODULE_7__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */] },
+        { name: 'public.dashboard', url: '/dashboard', component: __WEBPACK_IMPORTED_MODULE_13__device_mgt_dashboard_dashboard_component__["a" /* DashboardComponent */] },
+        { name: 'public.deviceManagement', url: '/deviceManagement', component: __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_management_device_mgt_component__["a" /* DeviceManagementComponent */] },
+        { name: 'public.deviceHistory', url: '/deviceHistory', component: __WEBPACK_IMPORTED_MODULE_9__device_mgt_device_history_device_history_component__["a" /* DeviceHistoryComponent */] },
+        { name: 'public.editDeviceHistory', url: '/deviceHistory/edit', component: __WEBPACK_IMPORTED_MODULE_18__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */] },
+        { name: 'public.insertDeviceHistory', url: '/deviceHistory/insert', component: __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */] },
+        { name: 'public.deviceInventory', url: '/deviceInventory', component: __WEBPACK_IMPORTED_MODULE_10__device_mgt_device_inventory_device_inventory_component__["a" /* DeviceInventoryComponent */] },
+        { name: 'public.accessoryInventory', url: '/accessoryInventory', component: __WEBPACK_IMPORTED_MODULE_11__device_mgt_accessory_inventory_accessory_inventory_component__["a" /* AccessoryInventoryComponent */] },
+        { name: 'public.customerManagement', url: '/customerManagement', component: __WEBPACK_IMPORTED_MODULE_12__device_mgt_customer_management_customer_management_component__["a" /* CustomerManagementComponent */] },
+        { name: 'login', url: '/login', component: __WEBPACK_IMPORTED_MODULE_15__device_mgt_login_login_component__["a" /* LoginComponent */] },
+        { name: 'signup', url: '/signup', component: __WEBPACK_IMPORTED_MODULE_14__device_mgt_signup_signup_component__["a" /* SignupComponent */] }
     ],
-    config: __WEBPACK_IMPORTED_MODULE_27__shared_uiRouter_config__["a" /* uiRouterConfigFn */]
+    config: __WEBPACK_IMPORTED_MODULE_26__shared_uiRouter_config__["a" /* uiRouterConfigFn */] // uiRouterConfigFn is a function, go to exapmles at https://ui-router.github.io/ng2/tutorial/hellosolarsystem
 };
 var AppModule = (function () {
     function AppModule() {
@@ -854,39 +818,40 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__device_mgt_device_management_device_mgt_component__["a" /* DeviceManagementComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__device_mgt_device_history_device_history_component__["a" /* DeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_inventory_device_inventory_component__["a" /* DeviceInventoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__device_mgt_accessory_inventory_accessory_inventory_component__["a" /* AccessoryInventoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__device_mgt_customer_management_customer_management_component__["a" /* CustomerManagementComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__device_mgt_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__device_mgt_signup_signup_component__["a" /* SignupComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__device_mgt_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__device_mgt_public_public_component__["a" /* PublicComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__device_mgt_device_management_device_mgt_component__["a" /* DeviceManagementComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__device_mgt_device_history_device_history_component__["a" /* DeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__device_mgt_device_inventory_device_inventory_component__["a" /* DeviceInventoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__device_mgt_accessory_inventory_accessory_inventory_component__["a" /* AccessoryInventoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__device_mgt_customer_management_customer_management_component__["a" /* CustomerManagementComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__device_mgt_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__device_mgt_signup_signup_component__["a" /* SignupComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__device_mgt_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__device_mgt_homepage_homepage_component__["a" /* HomepageComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__device_mgt_public_public_component__["a" /* PublicComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_18_ng2_smart_table__["a" /* Ng2SmartTableModule */],
-            __WEBPACK_IMPORTED_MODULE_20_ngx_pagination__["a" /* NgxPaginationModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_23_ng2_smart_table__["a" /* Ng2SmartTableModule */],
+            __WEBPACK_IMPORTED_MODULE_24_ngx_pagination__["a" /* NgxPaginationModule */],
             __WEBPACK_IMPORTED_MODULE_25_ng2_charts__["ChartsModule"],
             __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["UIRouterModule"].forRoot(routes),
-            // RouterModule.forRoot([]),
-            __WEBPACK_IMPORTED_MODULE_16__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot()
+            __WEBPACK_IMPORTED_MODULE_22__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot()
         ],
+        // some components are only loaded dynamically instead of loaded declaratively, you must tell the compiler about them in the entrycomponents list
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */]
+            __WEBPACK_IMPORTED_MODULE_16__device_mgt_device_management_modal_edit_deviceMgt_modal_edit_device_mgt_modal_component__["a" /* EditDeviceManagementModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__device_mgt_device_management_modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__device_mgt_device_history_edit_edit_modal__["a" /* EditDeviceHistoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__device_mgt_device_history_insert_insert_modal__["a" /* InsertDeviceHistoryComponent */] // an insert modal
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_15__service_device_service__["a" /* DeviceService */], __WEBPACK_IMPORTED_MODULE_26__shared_shared_variables__["a" /* SharedVariables */], __WEBPACK_IMPORTED_MODULE_24__angular_common__["a" /* Location */]],
+        // You must register a service provider with the injector, or it won't know how to create the service.
+        providers: [__WEBPACK_IMPORTED_MODULE_20__service_device_service__["a" /* DeviceService */], __WEBPACK_IMPORTED_MODULE_21__shared_shared_variables__["a" /* SharedVariables */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -952,7 +917,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CustomerManagementComponent = (function () {
     function CustomerManagementComponent(deviceService) {
         this.deviceService = deviceService;
-        this.panelState = [];
         this.test = 0;
     }
     CustomerManagementComponent.prototype.ngOnInit = function () {
@@ -966,9 +930,6 @@ var CustomerManagementComponent = (function () {
             _this.totalDevices = counts;
         }, function (err) { return console.log(err); });
     };
-    // accordionState(event, index) {
-    //   this.panelState[index] = event.nextState;
-    // }
     CustomerManagementComponent.prototype.rightClick = function (event) {
         console.log(event);
         this.test++;
@@ -1011,7 +972,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DashboardComponent = (function () {
     function DashboardComponent(deviceService) {
         this.deviceService = deviceService;
-        this.orders = { total_ordered_qty: null, total_received_qty: null, total_deficiency_qty: null };
+        this.orders = { total_ordered_qty: null, total_received_qty: null, total_deficiency_qty: null }; // orders data using in horizontal charts
         this.billable = {
             datasets: [{ data: [] }],
             labels: [],
@@ -1151,8 +1112,6 @@ var DashboardComponent = (function () {
                 _this.location.labels.push(value.location);
                 _this.location.datasets[0].data.push(Number(value.count));
             });
-            console.log('test');
-            console.log(deviceCounts);
             _this.totalAvailableDevices = deviceCounts;
             _this.location.isDataAvailable = true;
         }, function (err) { return console.log(err); });
@@ -1226,9 +1185,9 @@ var DeviceHistoryComponent = (function () {
     function DeviceHistoryComponent(deviceService, modalService) {
         this.deviceService = deviceService;
         this.modalService = modalService;
-        this.SelectedNumberOfRow = 30;
-        this.alert = { successMessage: false, type: null, message: null };
-        this.search = { searchBy: '', searchValue: '' };
+        this.SelectedNumberOfRow = 30; // how many rows in page
+        this.alert = { successMessage: false, type: null, message: null }; // alert msg
+        this.search = { searchBy: '', searchValue: '' }; // filtering parameters
     }
     DeviceHistoryComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1241,7 +1200,6 @@ var DeviceHistoryComponent = (function () {
         var _this = this;
         var obj = {};
         obj[value.searchBy] = value.searchValue;
-        console.log(obj);
         this.deviceService.postData('/deviceHistory/search', obj).subscribe(function (res) {
             _this.deviceHistoryData = res;
         }, function (err) { return console.log(err); });
@@ -1262,7 +1220,6 @@ var DeviceHistoryComponent = (function () {
         var _this = this;
         this.modalService.open(content).result.then(function (result) {
             _this.deviceService.postData('/deviceHistory/delete', result).subscribe(function (res) {
-                console.log(res);
                 _this.alert = { successMessage: true, type: 'success', message: 'delete success' };
             }, function (err) {
                 _this.alert = { successMessage: true, type: 'danger', message: 'delete failed ' + err };
@@ -1271,7 +1228,7 @@ var DeviceHistoryComponent = (function () {
             console.log(err);
         });
     };
-    // create
+    // create new data
     DeviceHistoryComponent.prototype.create = function () {
         var _this = this;
         var modalRef = this.modalService.open(__WEBPACK_IMPORTED_MODULE_4__insert_insert_modal__["a" /* InsertDeviceHistoryComponent */], { backdrop: 'static', size: 'lg' });
@@ -1335,7 +1292,6 @@ var DeviceInventoryComponent = (function () {
             var transformedName = item.replace(/_/g, ' ');
             _this.settings.columns[item] = { title: transformedName, filter: false };
         });
-        console.log('bgr');
     };
     return DeviceInventoryComponent;
 }());
@@ -1381,26 +1337,26 @@ var DeviceManagementComponent = (function () {
     function DeviceManagementComponent(modalService, deviceService) {
         this.modalService = modalService;
         this.deviceService = deviceService;
-        this.alert = { successMessage: false, type: null, message: null };
-        this.sort = false;
-        this.search = { device_sn: null, parent_clinic: null, status: null, location: null };
-        this.RowsPerPage = 30;
+        this.alert = { successMessage: false, type: null, message: null }; // alert banner
+        this.sort = false; // control sorting in table
+        this.search = { device_sn: null, parent_clinic: null, status: null, location: null }; // search devices
+        // Api: string;
+        this.downloadUrl = '/deviceMgt/download';
+        this.RowsPerPage = 30; // control how many rows shown in the table
         this.classTrueOrFalse = [];
     }
     DeviceManagementComponent.prototype.ngOnInit = function () {
         var _this = this;
         // this.Api = this.deviceService.Api;
-        this.downloadUrl = '/deviceMgt/download';
-        // data for smart-table
+        // retrieve device mgt data from server
         this.deviceService.getData('/deviceMgt/get').subscribe(function (response) {
-            console.log(response);
             _this.deviceMgtData = response;
             _this.classTrueOrFalse.push(false);
         }, function (err) { return console.log(err); });
-        // select options
+        // retrieve options from angular2 service
         this.options = this.deviceService.getDeviceMgtSelectOptions();
     };
-    // close alert bar
+    // close alert msg
     DeviceManagementComponent.prototype.closeAlert = function () {
         this.alert.successMessage = false;
     };
@@ -1408,7 +1364,7 @@ var DeviceManagementComponent = (function () {
     // changeClass($event) {
     //   this.status = $event.nextState;
     // }
-    // change billable style
+    // change billable style after row selection
     DeviceManagementComponent.prototype.billableStyle = function (type) {
         if (type === 'Y') {
             return { 'background-color': '#D98880', 'border-radius': '30px' };
@@ -1417,7 +1373,7 @@ var DeviceManagementComponent = (function () {
             return { 'background-color': '#CACFD2', 'border-radius': '30px' };
         }
     };
-    // selected row
+    // select row
     DeviceManagementComponent.prototype.selectedOrUnselectRow = function (index) {
         if (!this.classTrueOrFalse[index]) {
             this.classTrueOrFalse[index] = true;
@@ -1436,43 +1392,36 @@ var DeviceManagementComponent = (function () {
         modalRef.componentInstance.data = this.selectedMgtData;
         modalRef.result.then(function () {
             _this.alert = { successMessage: true, type: 'success', message: 'update success' };
-            console.log('testing');
-            console.log(_this.alert);
         }, function (error) {
             console.log(_this.alert);
         });
     };
-    // insert selected row
+    // delete selected row
     DeviceManagementComponent.prototype.deleteSelectedData = function (content) {
         var _this = this;
         console.log(this.selectedMgtData);
         this.modalService.open(content).result.then(function (res) {
             console.log(res);
             _this.deviceService.postData('/deviceMgt/insert', _this.selectedMgtData).subscribe(function (res) {
-                console.log(res);
                 _this.alert = { successMessage: true, type: 'success', message: 'insert success' };
             }, function (err) {
-                console.log(err);
                 _this.alert = { successMessage: true, type: 'danger', message: 'insert failed ' + err };
             });
         }, function (err) {
             console.log(err);
         });
     };
-    // create new
+    // create new row
     DeviceManagementComponent.prototype.create = function () {
         var _this = this;
         var modalRef = this.modalService.open(__WEBPACK_IMPORTED_MODULE_3__modal_insert_device_mgt_modal_insert_device_mgt_modal_component__["a" /* InsertDeviceMgtModalComponent */], { backdrop: 'static', size: 'lg' });
         modalRef.result.then(function () {
             _this.alert = { successMessage: true, type: 'success', message: 'update success' };
-            console.log('testing');
-            console.log(_this.alert);
         }, function (error) {
-            // this.alert = {successMessage: true, type: 'danger', message: 'update failed '+ error};
-            console.log(_this.alert);
+            console.log(error);
         });
     };
-    // searching
+    // search device
     DeviceManagementComponent.prototype.filter = function (value, pop) {
         var _this = this;
         console.log(pop);
@@ -1484,6 +1433,7 @@ var DeviceManagementComponent = (function () {
             }, function (err) { return console.log(err); });
         }
     };
+    // clear search parameters
     DeviceManagementComponent.prototype.clearFilter = function () {
         var _this = this;
         this.search = { device_sn: '', parent_clinic: '', status: '', location: '' };
@@ -1491,6 +1441,7 @@ var DeviceManagementComponent = (function () {
             _this.deviceMgtData = res;
         }, function (err) { return console.log(err); });
     };
+    // sort table
     DeviceManagementComponent.prototype.sortString = function (string) {
         var _this = this;
         this.sort = !this.sort;
@@ -1522,9 +1473,6 @@ var DeviceManagementComponent = (function () {
                 }
             }
         });
-    };
-    DeviceManagementComponent.prototype.test = function () {
-        console.log('test');
     };
     return DeviceManagementComponent;
 }());
@@ -1565,8 +1513,7 @@ var HomepageComponent = (function () {
         this.sharedVariable = sharedVariable;
     }
     HomepageComponent.prototype.ngOnInit = function () {
-        // console.log(this.sharedVariable.username);
-        this.username = this.sharedVariable.username;
+        this.username = this.sharedVariable.username; // get username
     };
     return HomepageComponent;
 }());
@@ -1591,8 +1538,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_device_service__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uirouter_angular__ = __webpack_require__(128);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1607,25 +1553,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var LoginComponent = (function () {
-    function LoginComponent(deviceService, sharedVariable, location, stateService) {
+    function LoginComponent(deviceService, sharedVariable, stateService) {
         this.deviceService = deviceService;
         this.sharedVariable = sharedVariable;
-        this.location = location;
         this.stateService = stateService;
-        // url = 'http://localhost:3000';
-        // alert msg
-        this.alert = { successMessage: false, message: 'incorrect username or password' };
-        // log in user
-        this.user = { username: null, password: null };
+        // url = 'http://localhost:3000';  // url in server side
+        this.alert = { successMessage: false, message: 'incorrect username or password' }; // alert object
+        this.user = { username: null, password: null }; // user inputs
     }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    // close alert msg
     LoginComponent.prototype.closeAlert = function () {
         this.alert.successMessage = false;
     };
-    LoginComponent.prototype.ngOnInit = function () {
-    };
-    // login form submit
+    // submit login form
     LoginComponent.prototype.submit = function (user) {
         var _this = this;
         if (!user.username || !user.password) {
@@ -1634,9 +1577,8 @@ var LoginComponent = (function () {
         else {
             this.deviceService.postData('/authenticateUser', user).subscribe(function (res) {
                 _this.sharedVariable.username = res.username;
-                _this.stateService.go('public.home');
+                _this.stateService.go('public.home'); // navigate url to home page after successfully logged in
             }, function (err) {
-                console.log(err);
                 _this.alert = { successMessage: true, message: 'Incorrect email or password' };
             });
         }
@@ -1648,12 +1590,12 @@ LoginComponent = __decorate([
         selector: 'app-login',
         template: __webpack_require__(488),
         styles: [__webpack_require__(426)]
-        // providers: [UIRouter]  // do not need providers for UIRouter, otherwise it will cause error
+        // providers: [UIRouter]  // do not input UIRouter in providers, otherwise it will cause error
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* Location */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["StateService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__uirouter_angular__["StateService"]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_device_service__["a" /* DeviceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__shared_shared_variables__["a" /* SharedVariables */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__uirouter_angular__["StateService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__uirouter_angular__["StateService"]) === "function" && _c || Object])
 ], LoginComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -1693,7 +1635,7 @@ var PublicComponent = (function () {
         var _this = this;
         this.http.get('/logout').toPromise().then(function (res) {
             _this.sharedVariables.username = null;
-            _this.stateService.go('login');
+            _this.stateService.go('login'); // navigate url after user logged out
         });
     };
     return PublicComponent;
@@ -1733,31 +1675,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SignupComponent = (function () {
     function SignupComponent(deviceService) {
         this.deviceService = deviceService;
-        // url = 'http://localhost:3000';
-        this.submitted = false;
-        // alert msg
-        this.alert = { successMessage: false, message: null };
-        this.user = { first_name: null, last_name: null, email: null, password: null, password2: null };
+        // url = 'http://localhost:3000'; // the url in the server side
+        this.submitted = false; // control if successfully submitted form or not
+        this.alert = { successMessage: false, message: null }; // initialize alert
+        this.user = { first_name: null, last_name: null, email: null, password: null, password2: null }; // store user inputs data
     }
+    SignupComponent.prototype.ngOnInit = function () {
+    };
+    // close alert msg
     SignupComponent.prototype.closeAlert = function () {
         this.alert.successMessage = false;
     };
-    SignupComponent.prototype.ngOnInit = function () {
-    };
-    // submit sign up form
+    // submit signup form
     SignupComponent.prototype.submit = function (user) {
         var _this = this;
         if (user.password !== user.password2) {
-            console.log('test');
             this.alert = { successMessage: true, message: 'passwords are not the same' };
         }
         else {
-            console.log(user);
             this.deviceService.postData('/addNewUsers', user).subscribe(function (res) {
-                console.log(res);
                 _this.submitted = true;
             }, function (err) {
-                console.log(err);
                 _this.alert = { successMessage: true, message: err };
             });
         }
@@ -1787,10 +1725,10 @@ var _a;
 
 // ui-router config
 function uiRouterConfigFn(router, injector) {
-    var checkLogin = injector.get(__WEBPACK_IMPORTED_MODULE_0__shared_shared_variables__["a" /* SharedVariables */]);
+    var checkLogin = injector.get(__WEBPACK_IMPORTED_MODULE_0__shared_shared_variables__["a" /* SharedVariables */]); // get SharedVariables component
     // Pre-load username at startup.
     var username = checkLogin.username;
-    // check username exists or not
+    // check username exists or not which indicates if user logged in or not
     if (!username) {
         router.urlService.url('/login');
     }
@@ -2146,14 +2084,14 @@ module.exports = "<div class=\"login-container\">\n  <div class=\"login-box\">\n
 /***/ 489:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" uiSref=\"public.home\">\n    <i class=\"fa fa-home fa-2x\"></i>\n  </a>\n  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.dashboard\" uiSrefActive=\"active\">\n          <span class=\"fa fa-dashboard fa-2x\"></span>\n          <br class=\"hidden-xs\">Dashboard\n        </a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle text-center\"  uiSrefActive=\"active\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-book fa-2x\"></span><br class=\"hidden-xs\">Device Management\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceManagement\">Device Management</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceHistory\">Device History</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceInventory\">Device Inventory</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.accessoryInventory\">Accessory Inventory</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.customerManagement\" uiSrefActive=\"active\">\n          <span class=\"fa fa-address-card fa-2x\"></span><br class=\"hidden-xs\">Customer\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\"  uiSrefActive=\"active\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-user-o fa-2x\"></span><br class=\"hidden-xs\">Account\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\" uiSrefActive=\"active\">\n          <button class=\"dropdown-item\" uiSrefActive=\"active\"  (click)=\"logout()\">Log Out</button>\n        </div>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<ui-view></ui-view>\n\n<br><br><br><br><br><br>\n\n<footer class=\"panel-footer\">\n  <div class=\"text-center\">\n    &copy; Copyright Hong He 2017\n  </div>\n</footer>\n"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n  <a class=\"navbar-brand\" uiSref=\"public.home\">\n    <i class=\"fa fa-home fa-2x\"></i>\n  </a>\n  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.dashboard\" uiSrefActive=\"active\">\n          <span class=\"fa fa-dashboard fa-2x\"></span>\n          <br class=\"hidden-xs\">Dashboard\n        </a>\n      </li>\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle text-center\"  uiSrefActive=\"active\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-book fa-2x\"></span><br class=\"hidden-xs\">Device Management\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceManagement\">Device Management</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceHistory\">Device History</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.deviceInventory\">Device Inventory</a>\n          <a class=\"dropdown-item\" uiSrefActive=\"active\" uiSref=\"public.accessoryInventory\">Accessory Inventory</a>\n        </div>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link text-center\" uiSref=\"public.customerManagement\" uiSrefActive=\"active\">\n          <span class=\"fa fa-address-card fa-2x\"></span><br class=\"hidden-xs\">Customer\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item dropdown\">\n        <a class=\"nav-link dropdown-toggle\"  uiSrefActive=\"active\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"fa fa-user-o fa-2x\"></span><br class=\"hidden-xs\">Account\n        </a>\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\" uiSrefActive=\"active\">\n          <button class=\"dropdown-item\" uiSrefActive=\"active\"  (click)=\"logout()\">Log Out</button>\n        </div>\n      </li>\n    </ul>\n  </div>\n</nav>\n\n<ui-view></ui-view>  <!-- rendered content will be shown in ui-view tag -->\n\n<br><br><br><br><br><br>\n\n<footer class=\"panel-footer\">\n  <div class=\"text-center\">\n    &copy; Copyright Hong He 2017\n  </div>\n</footer>\n"
 
 /***/ }),
 
 /***/ 490:
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container register-box\" [hidden]=\"submitted\">\n  <ngb-alert *ngIf=\"alert.successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n  <form #registerForm='ngForm'>\n    <h3 class=\"text-center\">Registration</h3>\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"firstName\" name=\"firstName\" aria-describedby=\"firstNameHelp\"\n             placeholder=\"Your First Name\" [(ngModel)]=\"user.first_name\" required #firstName=\"ngModel\">\n      <div *ngIf=\"firstName.errors && firstName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"firstName.errors && firstName.errors.required\">first name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"lastName\" name=\"lastName\" placeholder=\"Your Last Name\" aria-describedby=\"lastNameHelp\"\n             [(ngModel)]=\"user.last_name\"  required #lastName=\"ngModel\">\n      <div *ngIf=\"lastName.errors && lastName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"lastName.errors.required\">last name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">Email:</label>\n      <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" aria-describedby=\"emailHelp\"\n             pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" [(ngModel)]=\"user.email\" required  #email=\"ngModel\">\n      <div *ngIf=\"email.errors && email.touched\">\n        <span class=\"form_msg \"  *ngIf=\"email.errors.required\">last name is required</span>\n        <span class=\"form_msg \"  *ngIf=\"email.errors.pattern\">Must be a valid email address: handle@domain format</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" id=\"pwd\" name=\"pwd\" placeholder=\"Password\" aria-describedby=\"pwdHelp\"\n             [(ngModel)]=\"user.password\"  required #pwd=\"ngModel\">\n      <div *ngIf=\"pwd.errors && pwd.touched\">\n        <span class=\"form_msg\" *ngIf=\"pwd.errors.required\">password is required</span>\n      </div>\n    </div>\n    <!--enter password again-->\n    <div class=\"form-group\">\n      <label for=\"pwd2\">Confirm Password:</label>\n      <input type=\"password\" class=\"form-control\" name=\"pwd2\" id=\"pwd2\" placeholder=\" Confirm Password\"  aria-describedby=\"pwd2Help\"\n             [(ngModel)]=\"user.password2\"  required #pwd2=\"ngModel\">\n    </div>\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-success\" (click)=\"submit(user)\" [disabled]=\"registerForm.form.invalid\">sign up</button>\n    </div>\n  </form>\n  <br>\n  <a uiSref=\"login\">Already have an account, sign in here</a>\n  <br><br><br>\n</div>\n\n\n<div class=\"submitSuccess\" [hidden]=\"!submitted\">\n  <h2>Thank you, you have successfully submitted!</h2>\n  <a uiSref=\"login\">log in here...</a>\n</div>\n"
+module.exports = "\n<div class=\"container register-box\" [hidden]=\"submitted\">\n  <ngb-alert *ngIf=\"alert.successMessage\" type=\"danger\" dismissible=\"true\" (close)=\"closeAlert()\">{{alert.message}}</ngb-alert>\n  <form #registerForm='ngForm'>\n    <h3 class=\"text-center\">Registration</h3>\n    <div class=\"form-group\">\n      <label for=\"firstName\">First Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"firstName\" name=\"firstName\" aria-describedby=\"firstNameHelp\"\n             placeholder=\"Your First Name\" [(ngModel)]=\"user.first_name\" required #firstName=\"ngModel\">\n      <div *ngIf=\"firstName.errors && firstName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"firstName?.errors && firstName.errors.required\">first name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"lastName\">Last Name:</label>\n      <input type=\"text\" class=\"form-control\" id=\"lastName\" name=\"lastName\" placeholder=\"Your Last Name\" aria-describedby=\"lastNameHelp\"\n             [(ngModel)]=\"user.last_name\"  required #lastName=\"ngModel\">\n      <div *ngIf=\"lastName.errors && lastName.touched\">\n        <span class=\"form_msg\"  *ngIf=\"lastName.errors.required\">last name is required</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"email\">Email:</label>\n      <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" aria-describedby=\"emailHelp\"\n             pattern=\"^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$\" [(ngModel)]=\"user.email\" required  #email=\"ngModel\">\n      <div *ngIf=\"email.errors && email.touched\">\n        <span class=\"form_msg \"  *ngIf=\"email.errors.required\">last name is required</span>\n        <span class=\"form_msg \"  *ngIf=\"email.errors.pattern\">Must be a valid email address: handle@domain format</span>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" id=\"pwd\" name=\"pwd\" placeholder=\"Password\" aria-describedby=\"pwdHelp\"\n             [(ngModel)]=\"user.password\"  required #pwd=\"ngModel\">\n      <div *ngIf=\"pwd.errors && pwd.touched\">\n        <span class=\"form_msg\" *ngIf=\"pwd.errors.required\">password is required</span>\n      </div>\n    </div>\n    <!--enter password again-->\n    <div class=\"form-group\">\n      <label for=\"pwd2\">Confirm Password:</label>\n      <input type=\"password\" class=\"form-control\" name=\"pwd2\" id=\"pwd2\" placeholder=\" Confirm Password\"  aria-describedby=\"pwd2Help\"\n             [(ngModel)]=\"user.password2\"  required #pwd2=\"ngModel\">\n    </div>\n    <div class=\"form-group\">\n      <button type=\"submit\" class=\"btn btn-success\" (click)=\"submit(user)\" [disabled]=\"registerForm.form.invalid\">sign up</button>\n    </div>\n  </form>\n  <br>\n  <a uiSref=\"login\">Already have an account, sign in here</a>\n  <br><br><br>\n</div>\n\n\n<div class=\"submitSuccess\" [hidden]=\"!submitted\">\n  <h2>Thank you, you have successfully submitted!</h2>\n  <a uiSref=\"login\">log in here...</a>\n</div>\n"
 
 /***/ }),
 
@@ -2172,7 +2110,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var SharedVariables = (function () {
     function SharedVariables() {
-        this.username = null;
+        this.username = null; // store username after user log in, this will be used to control weather user logged in or not, if not logged in, it navigates url to login page
     }
     return SharedVariables;
 }());
