@@ -1577,7 +1577,7 @@ var LoginComponent = (function () {
         else {
             this.deviceService.postData('/authenticateUser', user).subscribe(function (res) {
                 _this.sharedVariable.username = res.username;
-                _this.stateService.go('public.home'); // navigate url to home page after successfully logged in
+                _this.stateService.go('public.dashboard'); // navigate url to home page after successfully logged in
             }, function (err) {
                 _this.alert = { successMessage: true, message: 'Incorrect email or password' };
             });
