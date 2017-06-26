@@ -1926,7 +1926,7 @@ exports = module.exports = __webpack_require__(19)(false);
 
 
 // module
-exports.push([module.i, "section {\r\n  background-image: url(" + __webpack_require__(743) + ");\r\n  /*font-family: \"Rajdhani\", \"DIN\", sans-serif;*/\r\n  font-size: 19px;\r\n  line-height: 1.5;\r\n  padding-left: 300px;\r\n  padding-right: 300px;\r\n}\r\nsection p {\r\n  /*font-family: \"Avenir Next\";*/\r\n  margin-bottom: 22px;\r\n  color: #232323;\r\n}\r\nsection h4 {\r\n  padding-top: 20px;\r\n  padding-bottom: 26px;\r\n  font-size: 42px;\r\n  text-transform: uppercase;\r\n  letter-spacing: .03em;\r\n  font-weight: 300;\r\n  text-align: center;\r\n}\r\n", ""]);
+exports.push([module.i, "section {\r\n  background-image: url(\"/assets/subtle-light-pattern.jpg\");\r\n  /*font-family: \"Rajdhani\", \"DIN\", sans-serif;*/\r\n  font-size: 19px;\r\n  line-height: 1.5;\r\n  padding-left: 300px;\r\n  padding-right: 300px;\r\n}\r\nsection p {\r\n  /*font-family: \"Avenir Next\";*/\r\n  margin-bottom: 22px;\r\n  color: #232323;\r\n}\r\nsection h4 {\r\n  padding-top: 20px;\r\n  padding-bottom: 26px;\r\n  font-size: 42px;\r\n  text-transform: uppercase;\r\n  letter-spacing: .03em;\r\n  font-weight: 300;\r\n  text-align: center;\r\n}\r\n", ""]);
 
 // exports
 
@@ -2122,14 +2122,7 @@ SharedVariables = __decorate([
 
 /***/ }),
 
-/***/ 743:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "subtle-light-pattern.25383912da10ae8a33f5.jpg";
-
-/***/ }),
-
-/***/ 746:
+/***/ 745:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(315);
@@ -2137,5 +2130,5 @@ module.exports = __webpack_require__(315);
 
 /***/ })
 
-},[746]);
+},[745]);
 //# sourceMappingURL=main.bundle.js.map
